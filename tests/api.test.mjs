@@ -9,6 +9,12 @@ test('v1 contract binds queries to a snapshot and keeps imports local',async t=>
   t.after(()=>child.kill());
   await Promise.race([once(child.stdout,'data'),once(child,'error').then(([err])=>{throw err;})]);
   const get=async(route)=>{const r=await fetch('http://127.0.0.1:4181'+route);return {status:r.status,body:await r.json()};};
+  for(const asset of ['/app.js','/flow-explorer.js','/flow-layout.js']){
+    const response=await fetch('http://127.0.0.1:4181'+asset);
+    assert.equal(response.status,200);
+    assert.match(response.headers.get('content-type'),/text\/javascript/);
+    assert.ok((await response.text()).length>100);
+  }
   const {body:project}=await get('/api/v1/project');
   assert.equal(project.context.apiVersion,'1.0');assert.equal(project.context.analysisMode,'offline-static');
   const noWrite=await fetch('http://127.0.0.1:4181/api/v1/import',{method:'POST'});

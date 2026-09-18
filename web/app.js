@@ -1,3 +1,4 @@
+import {flowExplorerMarkup,mountFlowExplorer,disposeFlowExplorer} from './flow-explorer.js';
 const $=id=>document.getElementById(id),state={project:null,program:null,block:null,calls:[],call:null};
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const api=async(route,args={})=>{if(!['project','health','import-status'].includes(route)&&state.project?.snapshotId)args={projectId:state.project.projectId,snapshotId:state.project.snapshotId,...args};const r=await fetch(`/api/${route}?${new URLSearchParams(args)}`);const data=await r.json();if(!r.ok)throw Error(data.error);return data;};
@@ -8,7 +9,7 @@ const tab=name=>{document.querySelectorAll('.panel').forEach(p=>p.hidden=p.id!==
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
 
 function renderBlocks(){const q=$('block-search').value.toLowerCase();const items=state.project.blocks.filter(b=>b.programId===state.program&&[b.name,b.symbol,b.description].join(' ').toLowerCase().includes(q));$('block-count').textContent=`${items.length} 条块记录`;$('blocks').innerHTML=items.map(b=>`<button class="block-item ${b.id===state.block?'selected':''}" data-block="${esc(b.id)}"><span><strong>${esc(b.name)}</strong><small>${esc(b.symbol||b.description||b.type)}</small></span><span class="badge ${b.status==='parsed'?'':'warn'}">${statusLabel(b.status)}</span></button>`).join('');$('blocks').querySelectorAll('button').forEach(b=>b.onclick=safe(()=>selectBlock(b.dataset.block)));}
-async function selectProgram(){state.program=$('program').value;$('point-results').innerHTML='<p class="empty">输入点位后开始追踪。</p>';const own=state.project.blocks.filter(b=>b.programId===state.program);if(own.length)await selectBlock((own.find(b=>b.name==='FC156')??own[0]).id);await searchSymbols();}
+async function selectProgram(){disposeFlowExplorer();state.program=$('program').value;$('point-results').innerHTML='<p class="empty">输入点位后开始追踪。</p>';const own=state.project.blocks.filter(b=>b.programId===state.program);if(own.length)await selectBlock((own.find(b=>b.name==='FC156')??own[0]).id);await searchSymbols();}
 async function selectBlock(id){state.block=id;state.call=null;$('flow').innerHTML='';$('flow-summary').textContent='请从调用图选择调用点，或打开验证案例。';$('flow-warnings').innerHTML='';$('flow-evidence').innerHTML='';$('bindings').innerHTML='';$('param-focus').innerHTML='<option value="">全部参数</option>';renderBlocks();const b=state.project.blocks.find(b=>b.id===id);$('block-title').textContent=`${b.name} ${b.symbol?'· '+b.symbol:''}`;$('block-description').textContent=b.description||`${statusLabel(b.status)} · ${b.networkCount} 个 Network · ${b.rowCount} 行指令`;$('open-block').disabled=b.status!=='parsed';const graph=await api('calls',{program:state.program,focus:id});if(state.block!==id)return;state.calls=graph.edges;renderCallGraph(graph);renderCallList();}
 function renderCallGraph(graph){const focus=graph.nodes.find(n=>n.id===state.block),left=[...new Set(graph.edges.filter(c=>c.target===state.block).map(c=>c.caller))],right=[...new Set(graph.edges.filter(c=>c.caller===state.block).map(c=>c.target))];const col=ids=>`<div class="call-column">${ids.slice(0,12).map(id=>{const b=graph.nodes.find(n=>n.id===id);return `<button class="call-node" data-block="${esc(id)}">${esc(b.name)} ${esc(b.symbol??'')}</button>`;}).join('')||'<span class="small">无直接调用</span>'}${ids.length>12?`<span class="small">另有 ${ids.length-12} 个，见下表</span>`:''}</div>`;$('call-graph').innerHTML=`${col(left)}<div class="arrow">→</div><div class="call-node focus">${esc(focus?.name)}<br>${esc(focus?.symbol??'')}</div><div class="arrow">→</div>${col(right)}`;$('call-graph').querySelectorAll('button').forEach(b=>{if(state.project.blocks.some(x=>x.id===b.dataset.block))b.onclick=safe(()=>selectBlock(b.dataset.block));else b.disabled=true;});if(graph.truncated)$('call-graph').insertAdjacentHTML('beforeend','<p class="small">调用点已截断至前 160 条。</p>');}
 function renderCallList(){const rows=state.calls.map(c=>`<tr><td>${esc(c.caller.split('--').at(-1))}</td><td>${esc(c.targetName)} ${esc(c.instance)}</td><td>N${c.network} · 指令 ${c.row}</td><td>${c.parameters.length}</td><td><button data-call="${esc(c.id)}">查看参数流</button></td></tr>`);$('call-list').innerHTML=rows.length?table(['调用者','目标 / 实例','调用位置','参数','操作'],rows):'<div class="empty">该块没有已识别的直接调用关系。</div>';$('call-list').querySelectorAll('button').forEach(b=>b.onclick=safe(()=>selectCall(b.dataset.call)));$('call-select').innerHTML=state.calls.map(c=>`<option value="${esc(c.id)}">${esc(c.caller.split('--').at(-1))} → ${esc(c.targetName)} · N${c.network} / ${c.row}</option>`).join('');}
@@ -37,7 +38,7 @@ $('import-project').onclick=safe(async()=>{importBusy(true);try{const job=await 
 const activeJob=await api('import-status');if(activeJob.status==='running')await safe(pollImport)();
 
 $('point-form').onsubmit=safe(async event=>{
-  event.preventDefault();const program=state.program,snapshot=state.project.snapshotId;
+  event.preventDefault();disposeFlowExplorer();const program=state.program,snapshot=state.project.snapshotId;
   $('point-submit').disabled=true;$('point-results').innerHTML='<p class="empty">正在查找直接读写与参数路径…</p>';
   try{
     const result=await api('point',{program,q:$('point-query').value});
@@ -70,40 +71,9 @@ function pointFlowMarkup(flow){
   const valueTargets=unique(flow.edges.filter(e=>e.from===flow.focus&&['data-transfer','parameter-in','parameter-out','argument-preparation'].includes(e.kind)).map(e=>names.get(e.to)));
   const conditionTargets=unique(flow.edges.filter(e=>e.from===flow.focus&&!['data-transfer','parameter-in','parameter-out','argument-preparation'].includes(e.kind)).map(e=>names.get(e.to)));
   const kinds={'data-transfer':'数值 / 运算结果传递','control-dependency':'逻辑条件影响','timer-dependency':'定时器条件影响','parameter-in':'输入参数绑定','parameter-out':'输出参数绑定','argument-preparation':'调用前参数准备'};
-  return '<h3>点位的来源与去向</h3><div class="point-overview"><p><strong>直接来源：</strong>'+esc(source.join('；')||'当前分析未还原写入来源，不能据此判断没有来源。')+'</p><p><strong>数值 / 参数去向：</strong>'+esc(valueTargets.join('；')||'未还原直接数值去向。')+'</p><p><strong>还参与条件：</strong>'+esc(conditionTargets.join('；')||'未还原条件影响。')+'</p></div><div class="flow-filter" role="group" aria-label="流程图关系显示"><label><input id="show-solid-flow" type="checkbox" checked aria-controls="point-flow"><span class="line-sample solid"></span>显示实线：数值 / 参数</label><label><input id="show-condition-flow" type="checkbox" checked aria-controls="point-flow"><span class="line-sample dashed"></span>显示虚线：条件影响</label><span id="point-flow-visible" class="small"></span></div><p class="small">可分别隐藏或显示实线和虚线；图下方的完整证据列表不会被过滤。常量会单独标出，未知来源保留为边界。'+(flow.hasCycle?'图中包含内部反馈或循环关系。':'')+'</p><div class="graph-scroll memory-graph"><svg id="point-flow" role="img" aria-label="点位来源与去向流程图"></svg></div><p class="small">'+flow.nodes.length+' 个节点 · '+flow.edges.length+' 条证据关系 · 最多上下游各 '+flow.limits.maxDepth+' 层'+(flow.truncated?' · 达到显示上限，边界已标出，可继续输入边界点位追踪。':'')+'</p><details><summary>流程图的全部关系与证据</summary>'+table(['来源 → 去向','关系','位置',''],flow.edges.map((e,i)=>'<tr><td>'+esc(names.get(e.from))+' → '+esc(names.get(e.to))+'</td><td>'+esc(kinds[e.kind]??e.kind)+'</td><td>'+esc(e.evidence.blockId.split('--').at(-1))+' / N'+e.evidence.network+' / '+e.evidence.row+'</td><td><button data-memory-ref="'+i+'">查看证据</button></td></tr>'))+'</details>';
+  return '<h3>点位的来源与去向</h3><div class="point-overview"><p><strong>直接来源：</strong>'+esc(source.join('；')||'当前分析未还原写入来源，不能据此判断没有来源。')+'</p><p><strong>数值 / 参数去向：</strong>'+esc(valueTargets.join('；')||'未还原直接数值去向。')+'</p><p><strong>还参与条件：</strong>'+esc(conditionTargets.join('；')||'未还原条件影响。')+'</p></div>'+flowExplorerMarkup()+'<p class="small">'+flow.nodes.length+' 个节点 · '+flow.edges.length+' 条证据关系 · 最多上下游各 '+flow.limits.maxDepth+' 层'+(flow.truncated?' · 达到显示上限，边界已标出，可继续输入边界点位追踪。':'')+'</p><details><summary>流程图的全部关系与证据</summary>'+table(['来源 → 去向','关系','位置',''],flow.edges.map((e,i)=>'<tr><td>'+esc(names.get(e.from))+' → '+esc(names.get(e.to))+'</td><td>'+esc(kinds[e.kind]??e.kind)+'</td><td>'+esc(e.evidence.blockId.split('--').at(-1))+' / N'+e.evidence.network+' / '+e.evidence.row+'</td><td><button data-memory-ref="'+i+'">查看证据</button></td></tr>'))+'</details>';
 }
 function drawPointFlow(flow){
-  const svg=$('point-flow');if(!svg)return;
-  const levels=[...new Set(flow.nodes.map(n=>n.level))].sort((a,b)=>a-b),position=new Map();
-  const maxCount=Math.max(...levels.map(level=>flow.nodes.filter(n=>n.level===level).length));
-  const height=Math.max(280,maxCount*88+65),width=Math.max(900,levels.length*245+35),nodeWidth=205;
-  svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.setAttribute('width',width);svg.setAttribute('height',height);
-  for(const [column,level] of levels.entries()){
-    const nodes=flow.nodes.filter(n=>n.level===level);
-    nodes.forEach((n,i)=>position.set(n.id,{x:20+column*245,y:45+(height-65-nodes.length*88)/2+i*88}));
-  }
-  const uniqueEdges=[...new Map(flow.edges.map((e,i)=>[e.from+'|'+e.to+'|'+e.kind,{...e,index:i}])).values()];
-  svg.innerHTML='<defs><marker id="memory-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#6c927f"/></marker></defs>'+levels.map((level,i)=>`<text class="memory-heading" x="${20+i*245}" y="22">${level===0?'当前点位':level<0?'上游 '+(-level)+' 层':'下游 '+level+' 层'}</text>`).join('')+uniqueEdges.map(e=>{
-    const a=position.get(e.from),b=position.get(e.to),back=b.x<=a.x,x1=a.x+nodeWidth,y1=a.y+28,x2=b.x,y2=b.y+28;
-    const path=e.from===e.to?`M${x1-20},${a.y} C${x1+45},${a.y-38} ${x1+45},${a.y+75} ${x1-20},${a.y+58}`:back?`M${a.x+30},${a.y} C${a.x+30},${a.y-25} ${b.x+45},${b.y-25} ${b.x+45},${b.y}`:`M${x1},${y1} C${x1+25},${y1} ${x2-25},${y2} ${x2},${y2}`;
-    return `<path class="flow-edge ${e.kind.includes('dependency')?'condition-edge':''}" data-memory-edge="${e.index}" d="${path}" marker-end="url(#memory-arrow)"><title>${esc(e.kind)} · 查看指令证据</title></path>`;
-  }).join('')+flow.nodes.map(n=>{
-    const p=position.get(n.id),label=n.label.length>50?n.label.slice(0,47)+'…':n.label;
-    const text=label.length>22?[label.slice(0,22),label.slice(22)]:[label];
-    const status=n.boundary?'达到追踪边界':n.sourceState==='unresolved'?'来源未解析':n.kind==='constant'?'常量':n.kind==='input'?'外部输入':n.kind==='parameter'?'调用参数':'内部数据';
-    return `<g class="memory-node ${n.id===flow.focus?'focus':''} ${n.sourceState==='unresolved'?'unresolved':''}"><title>${esc(n.label)} · ${esc(status)}</title><rect x="${p.x}" y="${p.y}" width="${nodeWidth}" height="65" rx="8"/>${text.map((line,i)=>`<text x="${p.x+9}" y="${p.y+20+i*15}">${esc(line)}</text>`).join('')}<text class="memory-status" x="${p.x+9}" y="${p.y+55}">${esc(status)}</text></g>`;
-  }).join('');
-  svg.querySelectorAll('[data-memory-edge]').forEach(el=>el.onclick=safe(()=>showEvidence(flow.edges[Number(el.dataset.memoryEdge)].evidence)));
+  mountFlowExplorer(flow,safe(showEvidence));
   $('point-results').querySelectorAll('[data-memory-ref]').forEach(el=>el.onclick=safe(()=>showEvidence(flow.edges[Number(el.dataset.memoryRef)].evidence)));
-  setupPointFlowFilters(svg);
-  const focusPosition=position.get(flow.focus),container=svg.parentElement;
-  if(focusPosition){container.scrollLeft=Math.max(0,focusPosition.x-container.clientWidth/2+nodeWidth/2);container.scrollTop=Math.max(0,focusPosition.y-container.clientHeight/2+32);}
-}
-
-
-
-function setupPointFlowFilters(svg){
-  const solid=$('show-solid-flow'),condition=$('show-condition-flow'),status=$('point-flow-visible');
-  const update=()=>{let visible=0;svg.querySelectorAll('[data-memory-edge]').forEach(edge=>{const show=edge.classList.contains('condition-edge')?condition.checked:solid.checked;edge.style.display=show?'':'none';if(show)visible++;});status.textContent=`当前显示 ${visible} 条连线`;};
-  solid.onchange=update;condition.onchange=update;update();
 }

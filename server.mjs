@@ -18,7 +18,7 @@ try{loadCurrent();}catch(error){console.error('读取上次导入失败，可重
 const importer=new ImportService(root,loadCurrent);
 function getBlock(id){if(!blocks.has(id)||blocks.get(id).status!=='parsed')return null;if(!details.has(id))details.set(id,JSON.parse(fs.readFileSync(path.join(dataDir,'blocks',id+'.json'),'utf8')));return details.get(id);}
 async function readBody(req){let body='';for await(const chunk of req){body+=chunk;if(body.length>16384)throw Error('请求过大。');}return JSON.parse(body||'{}');}
-const staticFiles=new Map([['/','index.html'],['/app.js','app.js'],['/style.css','style.css']]);
+const staticFiles=new Map([['/','index.html'],['/app.js','app.js'],['/style.css','style.css'],['/flow-layout.js','flow-layout.js'],['/flow-explorer.js','flow-explorer.js']]);
 const server=http.createServer(async(req,res)=>{
   const send=(status,value,type='application/json; charset=utf-8')=>{res.writeHead(status,{'Content-Type':type,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-ancestors 'none'"});res.end(type.startsWith('application/json')?JSON.stringify({...value,context:{apiVersion:'1.0',projectId:project?.projectId??null,snapshotId:project?.snapshotId??null,analysisMode:'offline-static'}}):value);};
   try{
@@ -34,7 +34,7 @@ const server=http.createServer(async(req,res)=>{
     }
     if(req.method!=='GET')return send(405,{error:'不支持此操作。',code:'METHOD_NOT_ALLOWED'});
     if(staticFiles.has(u.pathname)){const name=staticFiles.get(u.pathname);return send(200,fs.readFileSync(path.join(root,'web',name)),name.endsWith('.css')?'text/css':name.endsWith('.js')?'text/javascript':'text/html; charset=utf-8');}
-    if(u.pathname==='/api/health')return send(200,{app:'step7-explorer',version:'0.2.0',loaded:!!project});
+    if(u.pathname==='/api/health')return send(200,{app:'step7-explorer',version:'0.2.1',loaded:!!project});
     if(u.pathname==='/api/import-status')return send(200,importer.job??{status:'idle'});
     if(u.pathname==='/api/project')return send(200,project?{...project,callCount:project.calls.length,programs:project.programs.map(({symbols,...p})=>({...p,symbolCount:symbols.length})),calls:undefined}:{empty:true});
     if(!project)return send(409,{error:'请先选择 PLC 文件夹并导入工程。',code:'NO_PROJECT'});

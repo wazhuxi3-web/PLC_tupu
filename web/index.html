@@ -4,7 +4,7 @@
 <body>
 <header><div class="brand">S7<span>程序图谱工作台</span></div><div class="status">● 本地离线分析 <span>· 接口已预留</span></div></header>
 <main>
-  <section class="intro"><div><div class="eyebrow">STEP7 PROGRAM EXPLORER / 0.2 · OFFLINE</div><h1 id="title">正在读取工程…</h1><p id="subtitle">程序关系有迹可循。</p></div><div class="stamp" id="stamp"></div></section>
+  <section class="intro"><div><div class="eyebrow">STEP7 PROGRAM EXPLORER / 0.2.1 · OFFLINE</div><h1 id="title">正在读取工程…</h1><p id="subtitle">程序关系有迹可循。</p></div><div class="stamp" id="stamp"></div></section>
   <section class="import-card" aria-label="选择 PLC 工程文件夹"><div class="section-head"><div><h2>打开 PLC 工程</h2><p>选择完整 STEP7 工程文件夹，保留 .S7P 文件与配套目录。</p></div><button id="browse-folder">选择文件夹…</button></div><form id="folder-form"><label for="folder-path">文件夹位置（也可直接粘贴路径）</label><div class="folder-input"><input id="folder-path" placeholder="C:\PLC项目\工程名称"><button type="submit" id="inspect-folder">识别工程</button></div></form><div id="project-candidates" hidden><div class="import-options"><label>工程入口<select id="project-file"></select></label><label>文本编码<select id="code-page"><option value="936">简体中文 · CP936</option><option value="1252">西欧 · Windows-1252</option><option value="65001">UTF-8</option></select></label><button id="import-project">导入并打开</button></div></div><p id="import-message" class="small" role="status">导入在本机完成，原工程保持只读。运行无需联网。</p><progress id="import-progress" hidden aria-label="工程导入进度"></progress></section>
   <section class="metrics" id="metrics"></section>
   <div id="error" role="alert" hidden></div>
