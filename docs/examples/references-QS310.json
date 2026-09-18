@@ -1,0 +1,30 @@
+{
+  "operand": "I920.0",
+  "items": [
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC202",
+      "network": 1,
+      "row": 5,
+      "kind": "read",
+      "command": "A",
+      "operand": "I 920.0"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC231",
+      "network": 4,
+      "row": 52,
+      "kind": "read",
+      "command": "A",
+      "operand": "I 920.0"
+    }
+  ],
+  "total": 2,
+  "truncated": false,
+  "scope": "已解析块中的直接地址与已还原调用实参；不包含间接寻址和地址重叠推断。",
+  "context": {
+    "apiVersion": "1.0",
+    "projectId": "l0226d02",
+    "snapshotId": "097c29834d72ea77fe98b28a1dc05fd9acffa099a85a9343cca0c7165bf085e7",
+    "analysisMode": "offline-static"
+  }
+}

@@ -1,0 +1,1240 @@
+{
+  "call": {
+    "network": 4,
+    "parameters": [
+      {
+        "direction": "IN",
+        "type": "INT",
+        "value": "310",
+        "comment": "",
+        "name": "M_NO"
+      },
+      {
+        "direction": "IN",
+        "type": "INT",
+        "value": "100",
+        "comment": "",
+        "name": "NEXT_M_NO"
+      },
+      {
+        "direction": "IN",
+        "type": "INT",
+        "value": "200",
+        "comment": "",
+        "name": "M_NO_Offset"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.0",
+        "comment": "",
+        "name": "READY_X"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.1",
+        "comment": "",
+        "name": "M_GZ"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.2",
+        "comment": "",
+        "name": "OP_AUTO"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.3",
+        "comment": "",
+        "name": "FW_TJ"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.4",
+        "comment": "",
+        "name": "BW_TJ"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.5",
+        "comment": "",
+        "name": "M_QS"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.6",
+        "comment": "",
+        "name": "OP_FW"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 102.7",
+        "comment": "",
+        "name": "OP_BW"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 103.0",
+        "comment": "",
+        "name": "M_Select"
+      },
+      {
+        "direction": "IN",
+        "type": "BOOL",
+        "value": "L 103.1",
+        "comment": "",
+        "name": "M_TO_M1"
+      },
+      {
+        "direction": "OUT",
+        "type": "BOOL",
+        "value": "A 1420.0",
+        "comment": "",
+        "name": "M_FW"
+      },
+      {
+        "direction": "OUT",
+        "type": "BOOL",
+        "value": "A 1420.1",
+        "comment": "",
+        "name": "M_BW"
+      }
+    ],
+    "row": 67,
+    "target": "p-ombstx-offline-0000000E--FC156",
+    "conditional": false,
+    "instance": "",
+    "caller": "p-ombstx-offline-0000000E--FC231",
+    "programId": "p-ombstx-offline-0000000E",
+    "targetName": "FC156",
+    "id": "p-ombstx-offline-0000000E--FC231--r67",
+    "targetStatus": "parsed"
+  },
+  "nodes": [
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:in-actual:L102.5",
+      "label": "L102.5",
+      "column": 1,
+      "operand": "L102.5"
+    },
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:in-param:M_QS",
+      "label": "FC156.M_QS",
+      "column": 2,
+      "parameter": "M_QS",
+      "direction": "IN"
+    },
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:source:I920.0",
+      "label": "QS310 · I920.0",
+      "column": 0,
+      "operand": "I920.0"
+    },
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:out-param:M_FW",
+      "label": "FC156.M_FW",
+      "column": 3,
+      "parameter": "M_FW",
+      "direction": "OUT"
+    },
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:out-actual:Q1420.0",
+      "label": "310_FW · Q1420.0",
+      "column": 4,
+      "operand": "Q1420.0"
+    },
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:out-param:M_BW",
+      "label": "FC156.M_BW",
+      "column": 3,
+      "parameter": "M_BW",
+      "direction": "OUT"
+    },
+    {
+      "id": "p-ombstx-offline-0000000E--FC231--r67:out-actual:Q1420.1",
+      "label": "310_BW · Q1420.1",
+      "column": 4,
+      "operand": "Q1420.1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e16",
+      "from": "p-ombstx-offline-0000000E--FC231--r67:in-actual:L102.5",
+      "to": "p-ombstx-offline-0000000E--FC231--r67:in-param:M_QS",
+      "kind": "parameter-in",
+      "evidence": {
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "row": 67,
+        "network": 4,
+        "parameter": "M_QS"
+      }
+    },
+    {
+      "id": "e17",
+      "from": "p-ombstx-offline-0000000E--FC231--r67:source:I920.0",
+      "to": "p-ombstx-offline-0000000E--FC231--r67:in-actual:L102.5",
+      "kind": "boolean-preparation",
+      "evidence": {
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "row": 53,
+        "readRow": 52,
+        "network": 4
+      }
+    },
+    {
+      "id": "e26",
+      "from": "p-ombstx-offline-0000000E--FC231--r67:out-param:M_FW",
+      "to": "p-ombstx-offline-0000000E--FC231--r67:out-actual:Q1420.0",
+      "kind": "parameter-out",
+      "evidence": {
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "row": 67,
+        "network": 4,
+        "parameter": "M_FW"
+      }
+    },
+    {
+      "id": "e27",
+      "from": "p-ombstx-offline-0000000E--FC231--r67:out-param:M_BW",
+      "to": "p-ombstx-offline-0000000E--FC231--r67:out-actual:Q1420.1",
+      "kind": "parameter-out",
+      "evidence": {
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "row": 67,
+        "network": 4,
+        "parameter": "M_BW"
+      }
+    },
+    {
+      "id": "e32",
+      "from": "p-ombstx-offline-0000000E--FC231--r67:in-param:M_QS",
+      "to": "p-ombstx-offline-0000000E--FC231--r67:out-param:M_FW",
+      "kind": "potential-boolean-dependency",
+      "evidence": {
+        "blockId": "p-ombstx-offline-0000000E--FC156",
+        "row": 21,
+        "readRow": 14,
+        "network": 2
+      }
+    },
+    {
+      "id": "e42",
+      "from": "p-ombstx-offline-0000000E--FC231--r67:in-param:M_QS",
+      "to": "p-ombstx-offline-0000000E--FC231--r67:out-param:M_BW",
+      "kind": "potential-boolean-dependency",
+      "evidence": {
+        "blockId": "p-ombstx-offline-0000000E--FC156",
+        "row": 36,
+        "readRow": 29,
+        "network": 3
+      }
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "caller": [
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 1,
+        "row": 4,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW100"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 2,
+        "row": 12,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW100"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 3,
+        "row": 26,
+        "message": "该网络未作布尔依赖推导：JNB 002"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 5,
+        "row": 74,
+        "message": "该网络未作布尔依赖推导：L S5T#100ms"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 6,
+        "row": 84,
+        "message": "该网络未作布尔依赖推导：L S5T#15s"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 7,
+        "row": 93,
+        "message": "该网络未作布尔依赖推导：A T29"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 8,
+        "row": 101,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW110"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 9,
+        "row": 109,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW110"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 10,
+        "row": 153,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW100"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 11,
+        "row": 164,
+        "message": "该网络未作布尔依赖推导：L DB14.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 12,
+        "row": 172,
+        "message": "该网络未作布尔依赖推导：L DB14.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 13,
+        "row": 187,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW110"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 14,
+        "row": 196,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW110"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 15,
+        "row": 238,
+        "message": "该网络未作布尔依赖推导：L DB14.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 16,
+        "row": 272,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW110"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 17,
+        "row": 308,
+        "message": "该网络未作布尔依赖推导：L DB15.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 18,
+        "row": 316,
+        "message": "该网络未作布尔依赖推导：L DB15.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 19,
+        "row": 339,
+        "message": "该网络未作布尔依赖推导：L DB15.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 20,
+        "row": 374,
+        "message": "该网络未作布尔依赖推导：L DB15.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 21,
+        "row": 395,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW150"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 22,
+        "row": 415,
+        "message": "该网络未作布尔依赖推导：L DB16.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 23,
+        "row": 423,
+        "message": "该网络未作布尔依赖推导：L DB16.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 25,
+        "row": 474,
+        "message": "该网络未作布尔依赖推导：L DB16.DBW0"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 26,
+        "row": 495,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW150"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 27,
+        "row": 503,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW150"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 29,
+        "row": 551,
+        "message": "该网络未作布尔依赖推导：L S5T#50ms"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 30,
+        "row": 584,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW160"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 31,
+        "row": 593,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW160"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 32,
+        "row": 632,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW150"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 33,
+        "row": 652,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW160"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 34,
+        "row": 703,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW170"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 35,
+        "row": 711,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW170"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 36,
+        "row": 755,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW160"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 37,
+        "row": 766,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW180"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 38,
+        "row": 774,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW180"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 39,
+        "row": 818,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW170"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 40,
+        "row": 829,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW190"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 41,
+        "row": 837,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW190"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 42,
+        "row": 859,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW218"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 43,
+        "row": 897,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW200"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 44,
+        "row": 905,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW200"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 46,
+        "row": 953,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW210"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 47,
+        "row": 962,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW210"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 48,
+        "row": 969,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW1900"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 49,
+        "row": 1001,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW310"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 50,
+        "row": 1015,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW310"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 51,
+        "row": 1047,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW210"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 52,
+        "row": 1228,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 53,
+        "row": 1261,
+        "message": "该网络未作布尔依赖推导：L MW11"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 54,
+        "row": 1283,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW218"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 55,
+        "row": 1383,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW218"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 56,
+        "row": 1411,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW210"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 57,
+        "row": 1452,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW220"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 58,
+        "row": 1473,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW220"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 59,
+        "row": 1530,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW230"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 60,
+        "row": 1576,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW220"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 61,
+        "row": 1591,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW220"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 62,
+        "row": 1642,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW216"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 63,
+        "row": 1707,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW240"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 64,
+        "row": 1715,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW240"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 65,
+        "row": 1740,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW230"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 66,
+        "row": 1776,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW250"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 67,
+        "row": 1785,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW250"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 68,
+        "row": 1838,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW220"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 69,
+        "row": 1857,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW250"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 70,
+        "row": 1908,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW260"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 71,
+        "row": 1919,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW260"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 72,
+        "row": 1943,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 73,
+        "row": 1994,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW270"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 74,
+        "row": 2002,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW270"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 75,
+        "row": 2024,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 78,
+        "row": 2114,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW290"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 79,
+        "row": 2126,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW290"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 80,
+        "row": 2167,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW250"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 81,
+        "row": 2186,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW290"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 82,
+        "row": 2226,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW310"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 83,
+        "row": 2234,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW310"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 84,
+        "row": 2254,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW218"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 85,
+        "row": 2311,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW320"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 86,
+        "row": 2319,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW320"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 87,
+        "row": 2364,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW330"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 88,
+        "row": 2375,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW330"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 89,
+        "row": 2383,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW330"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 90,
+        "row": 2428,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW340"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 91,
+        "row": 2439,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW340"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 92,
+        "row": 2450,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW340"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 93,
+        "row": 2517,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 94,
+        "row": 2535,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW370"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 95,
+        "row": 2546,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW370"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 96,
+        "row": 2574,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 97,
+        "row": 2643,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 98,
+        "row": 2667,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 99,
+        "row": 2730,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW388"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 100,
+        "row": 2782,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW370"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 101,
+        "row": 2802,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 102,
+        "row": 2869,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW390"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 103,
+        "row": 2877,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW390"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 104,
+        "row": 2912,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW388"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 105,
+        "row": 2950,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW400"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 106,
+        "row": 2958,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW400"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 107,
+        "row": 2975,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 108,
+        "row": 3037,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW410"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 109,
+        "row": 3045,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW410"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 110,
+        "row": 3062,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 111,
+        "row": 3124,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW420"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 112,
+        "row": 3132,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW420"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 113,
+        "row": 3139,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW420"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 114,
+        "row": 3185,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 115,
+        "row": 3231,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW420"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 116,
+        "row": 3242,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 117,
+        "row": 3257,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW440"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 118,
+        "row": 3265,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW440"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 119,
+        "row": 3406,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW450"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 122,
+        "row": 3475,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW460"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 123,
+        "row": 3483,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW460"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 124,
+        "row": 3505,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW450"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 125,
+        "row": 3589,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW470"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 126,
+        "row": 3598,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW470"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 127,
+        "row": 3638,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW478"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 128,
+        "row": 3658,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW478"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 129,
+        "row": 3682,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW470"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 130,
+        "row": 3748,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW480"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 131,
+        "row": 3756,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW480"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 132,
+        "row": 3781,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW478"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 133,
+        "row": 3840,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW500"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 134,
+        "row": 3848,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW500"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 135,
+        "row": 3866,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 136,
+        "row": 3928,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW510"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 137,
+        "row": 3936,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW510"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 138,
+        "row": 3954,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 139,
+        "row": 4016,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW520"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 140,
+        "row": 4024,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW520"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 141,
+        "row": 4042,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 142,
+        "row": 4104,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW530"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 143,
+        "row": 4112,
+        "message": "该网络未作布尔依赖推导：L DB8.DBW530"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 144,
+        "row": 4130,
+        "message": "该网络未作布尔依赖推导：L DB32.DBW4"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 145,
+        "row": 4199,
+        "message": "该网络未作布尔依赖推导：S M 510.1"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 146,
+        "row": 4202,
+        "message": "该网络未作布尔依赖推导：L S5T#10m"
+      },
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC231",
+        "network": 147,
+        "row": 4214,
+        "message": "该网络未作布尔依赖推导：FP M 510.2"
+      }
+    ],
+    "callee": [
+      {
+        "code": "UNSUPPORTED_NETWORK",
+        "blockId": "p-ombstx-offline-0000000E--FC156",
+        "network": 1,
+        "row": 4,
+        "message": "该网络未作布尔依赖推导：JNB _001"
+      }
+    ],
+    "analyzedCalleeNetworks": 2,
+    "totalCalleeNetworks": 3
+  },
+  "semantics": "单个调用点的潜在布尔依赖；未证明当前执行条件或现场因果。不同调用点不会合并。",
+  "truncated": false,
+  "matched": true,
+  "context": {
+    "apiVersion": "1.0",
+    "projectId": "l0226d02",
+    "snapshotId": "097c29834d72ea77fe98b28a1dc05fd9acffa099a85a9343cca0c7165bf085e7",
+    "analysisMode": "offline-static"
+  }
+}

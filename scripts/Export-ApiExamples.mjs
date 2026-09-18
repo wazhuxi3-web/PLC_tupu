@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const base=process.env.EXPLORER_URL??'http://127.0.0.1:4173';
+const get=async(route,params={})=>{const r=await fetch(`${base}/api/v1/${route}?${new URLSearchParams(params)}`);if(!r.ok)throw Error(await r.text());return r.json();};
+const p=await get('project');
+if(p.projectId!=='l0226d02')throw Error('这些样例以已导入的 L0226D02 为验收样本。');
+const program=p.programs.find(p=>p.cpu==='CPU 416-3 PN/DP');
+const args={projectId:p.projectId,snapshotId:p.snapshotId,program:program.id};
+const point=await get('point',{...args,q:'MW17'});
+const calls=await get('calls',{...args,focus:p.blocks.find(b=>b.programId===program.id&&b.name==='FC231').id});
+const call=calls.edges.find(c=>c.targetName==='FC156'&&c.parameters.some(p=>p.name==='M_NO'&&p.value==='310'));
+const graph=await get('parameters',{...args,call:call.id,focus:'M_QS'});
+const dir=new URL('../docs/examples/',import.meta.url);fs.mkdirSync(dir,{recursive:true});
+for(const [name,data] of Object.entries({'point-MW17':point,'parameter-QS310':graph,'references-QS310':await get('references',{...args,q:'QS310'})}))fs.writeFileSync(new URL(name+'.json',dir),JSON.stringify(data,null,2)+'\n');
+console.log('Saved actual local API examples; context IDs are examples, not configuration.');

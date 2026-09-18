@@ -1,0 +1,4221 @@
+{
+  "query": "MW17",
+  "operand": "MW17",
+  "ambiguous": false,
+  "symbols": [],
+  "flow": {
+    "focus": "memory:MW17",
+    "nodes": [
+      {
+        "id": "memory:MW17",
+        "operand": "MW17",
+        "label": "MW17",
+        "kind": "memory",
+        "level": 0,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:DB26.DBW84",
+        "operand": "DB26.DBW84",
+        "label": "DB26.DBW84",
+        "kind": "memory",
+        "level": -1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:MW28",
+        "operand": "MW28",
+        "label": "0000 · MW28",
+        "kind": "memory",
+        "level": -1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "constant:0",
+        "label": "0",
+        "kind": "constant",
+        "level": -2,
+        "boundary": false,
+        "sourceState": "constant"
+      },
+      {
+        "id": "memory:MW48",
+        "operand": "MW48",
+        "label": "MW48",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:DB26.DBW14",
+        "operand": "DB26.DBW14",
+        "label": "DB26.DBW14",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M400.0",
+        "operand": "M400.0",
+        "label": "电子标签读写成功 · M400.0",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:T36",
+        "operand": "T36",
+        "label": "T36",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M145.0",
+        "operand": "M145.0",
+        "label": "定点装箱RFID校验错误 · M145.0",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "label": "FC239 / L0.1",
+        "kind": "unresolved-local",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M6.0",
+        "operand": "M6.0",
+        "label": "Current_Task_OK · M6.0",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:T97",
+        "operand": "T97",
+        "label": "T97",
+        "kind": "memory",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "label": "FC239 / L0.1",
+        "kind": "unresolved-local",
+        "level": 1,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:DB26.DBW16",
+        "operand": "DB26.DBW16",
+        "label": "DB26.DBW16",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:DB5.DBW90",
+        "operand": "DB5.DBW90",
+        "label": "DB5.DBW90",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M2.1",
+        "operand": "M2.1",
+        "label": "OP02_FAULT · M2.1",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC235--r182:actual:L1.3",
+        "label": "FC235 / L1.3",
+        "kind": "unresolved-local",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--OB1--r12:write162:L1.3",
+        "label": "FC235 / L1.3",
+        "kind": "unresolved-local",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M6.1",
+        "operand": "M6.1",
+        "label": "D02_TASK_END · M6.1",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M6.3",
+        "operand": "M6.3",
+        "label": "5339_Counter · M6.3",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M13.7",
+        "operand": "M13.7",
+        "label": "M13.7",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:T22",
+        "operand": "T22",
+        "label": "T22",
+        "kind": "memory",
+        "level": 2,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:actual:L0.4",
+        "label": "FC200 / L0.4",
+        "kind": "unresolved-local",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--OB1--r7:write204:L0.4",
+        "label": "FC200 / L0.4",
+        "kind": "unresolved-local",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--OB1--r7:write682:L0.0",
+        "label": "FC200 / L0.0",
+        "kind": "unresolved-local",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC235--r182:#FW_TJ",
+        "label": "FC156 / #FW_TJ",
+        "kind": "parameter",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:T44",
+        "operand": "T44",
+        "label": "T44",
+        "kind": "memory",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--OB1--r19:write40:L0.1",
+        "label": "FC239 / L0.1",
+        "kind": "unresolved-local",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:T40",
+        "operand": "T40",
+        "label": "T40",
+        "kind": "memory",
+        "level": 3,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "label": "FC159 / #OP_FAULT",
+        "kind": "parameter",
+        "level": 4,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC235--r182:#M_FW",
+        "label": "FC156 / #M_FW",
+        "kind": "parameter",
+        "level": 4,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:write13:L1.0",
+        "label": "FC159 / L1.0",
+        "kind": "unresolved-local",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:write22:L1.1",
+        "label": "FC159 / L1.1",
+        "kind": "unresolved-local",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "label": "FC159 / #AD_CONTROL_BIT",
+        "kind": "parameter",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:#OP_Mute_Dis",
+        "label": "FC159 / #OP_Mute_Dis",
+        "kind": "parameter",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "label": "FC159 / #OP_HA",
+        "kind": "parameter",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "p-ombstx-offline-0000000E--FC200--r209:#OP_RED_LAMP",
+        "label": "FC159 / #OP_RED_LAMP",
+        "kind": "parameter",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:Q1652.0",
+        "operand": "Q1652.0",
+        "label": "204_FW · Q1652.0",
+        "kind": "memory",
+        "level": 5,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:M25.1",
+        "operand": "M25.1",
+        "label": "M25.1",
+        "kind": "memory",
+        "level": 6,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:Q1010.1",
+        "operand": "Q1010.1",
+        "label": "OP02_Mute_DIS · Q1010.1",
+        "kind": "memory",
+        "level": 6,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:Q1010.5",
+        "operand": "Q1010.5",
+        "label": "OP02_Buzzer · Q1010.5",
+        "kind": "memory",
+        "level": 6,
+        "boundary": false,
+        "sourceState": "internal"
+      },
+      {
+        "id": "memory:Q1010.4",
+        "operand": "Q1010.4",
+        "label": "OP02_RED_LAMP · Q1010.4",
+        "kind": "memory",
+        "level": 6,
+        "boundary": false,
+        "sourceState": "internal"
+      }
+    ],
+    "edges": [
+      {
+        "id": "m201",
+        "from": "constant:0",
+        "to": "memory:MW28",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 3,
+          "row": 11,
+          "readRow": 10
+        }
+      },
+      {
+        "id": "m586",
+        "from": "memory:M145.0",
+        "to": "memory:M2.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 16,
+          "row": 626,
+          "readRow": 572
+        }
+      },
+      {
+        "id": "m2157",
+        "from": "memory:M6.1",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 23,
+          "readRow": 22
+        }
+      },
+      {
+        "id": "m2161",
+        "from": "memory:M6.1",
+        "to": "memory:T44",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 31,
+          "readRow": 28
+        }
+      },
+      {
+        "id": "m2162",
+        "from": "memory:M6.3",
+        "to": "memory:T44",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 31,
+          "readRow": 29
+        }
+      },
+      {
+        "id": "m2421",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:MW17",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1059,
+          "readRow": 1058
+        }
+      },
+      {
+        "id": "m2423",
+        "from": "constant:0",
+        "to": "memory:DB26.DBW84",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1209,
+          "readRow": 1208
+        }
+      },
+      {
+        "id": "m2426",
+        "from": "memory:MW17",
+        "to": "memory:MW48",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1293,
+          "readRow": 1291
+        }
+      },
+      {
+        "id": "m2429",
+        "from": "memory:MW17",
+        "to": "memory:DB26.DBW14",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1317,
+          "readRow": 1316
+        }
+      },
+      {
+        "id": "m2430",
+        "from": "memory:MW48",
+        "to": "memory:DB26.DBW16",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1325,
+          "readRow": 1324
+        }
+      },
+      {
+        "id": "m2436",
+        "from": "memory:MW48",
+        "to": "memory:DB5.DBW90",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1385,
+          "readRow": 1384
+        }
+      },
+      {
+        "id": "m2437",
+        "from": "memory:MW17",
+        "to": "memory:MW48",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1446,
+          "readRow": 1444
+        }
+      },
+      {
+        "id": "m2441",
+        "from": "memory:MW17",
+        "to": "memory:DB26.DBW14",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1481,
+          "readRow": 1480
+        }
+      },
+      {
+        "id": "m2442",
+        "from": "memory:MW48",
+        "to": "memory:DB26.DBW16",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1489,
+          "readRow": 1488
+        }
+      },
+      {
+        "id": "m2448",
+        "from": "memory:MW48",
+        "to": "memory:DB5.DBW90",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1548,
+          "readRow": 1547
+        }
+      },
+      {
+        "id": "m2449",
+        "from": "memory:MW28",
+        "to": "memory:MW17",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1616,
+          "readRow": 1615
+        }
+      },
+      {
+        "id": "m2450",
+        "from": "memory:MW28",
+        "to": "memory:MW48",
+        "kind": "data-transfer",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1624,
+          "readRow": 1623
+        }
+      },
+      {
+        "id": "m6006",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:actual:L0.4",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "kind": "parameter-in",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "OP_FAULT",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6007",
+        "from": "memory:M2.1",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:actual:L0.4",
+        "kind": "argument-preparation",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "OP_FAULT",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209",
+          "readRow": 203
+        }
+      },
+      {
+        "id": "m6011",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_Mute_Dis",
+        "to": "memory:Q1010.1",
+        "kind": "parameter-out",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "OP_Mute_Dis",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6014",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_RED_LAMP",
+        "to": "memory:Q1010.4",
+        "kind": "parameter-out",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "OP_RED_LAMP",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6015",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "to": "memory:Q1010.5",
+        "kind": "parameter-out",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "OP_HA",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6016",
+        "from": "memory:M25.1",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "kind": "parameter-in",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "AD_CONTROL_BIT",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6017",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "to": "memory:M25.1",
+        "kind": "parameter-out",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 209,
+          "parameter": "AD_CONTROL_BIT",
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6021",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:write13:L1.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 13,
+          "readRow": 11,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6023",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:write22:L1.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 22,
+          "readRow": 11,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6025",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:write22:L1.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 22,
+          "readRow": 16,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6027",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:write22:L1.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 22,
+          "readRow": 19,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6029",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 25,
+          "readRow": 11,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6031",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 25,
+          "readRow": 16,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6033",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 25,
+          "readRow": 19,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6035",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_Mute_Dis",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 28,
+          "readRow": 11,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6037",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_Mute_Dis",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 28,
+          "readRow": 16,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6039",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_Mute_Dis",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 28,
+          "readRow": 19,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6042",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 31,
+          "readRow": 11,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6044",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 31,
+          "readRow": 16,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6046",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_HA",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 31,
+          "readRow": 19,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6048",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#OP_RED_LAMP",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 4,
+          "row": 34,
+          "readRow": 11,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m6051",
+        "from": "p-ombstx-offline-0000000E--FC200--r209:#OP_FAULT",
+        "to": "p-ombstx-offline-0000000E--FC200--r209:#AD_CONTROL_BIT",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC159",
+          "network": 5,
+          "row": 40,
+          "readRow": 38,
+          "callId": "p-ombstx-offline-0000000E--FC200--r209"
+        }
+      },
+      {
+        "id": "m34119",
+        "from": "p-ombstx-offline-0000000E--FC235--r182:actual:L1.3",
+        "to": "p-ombstx-offline-0000000E--FC235--r182:#FW_TJ",
+        "kind": "parameter-in",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 182,
+          "parameter": "FW_TJ",
+          "callId": "p-ombstx-offline-0000000E--FC235--r182"
+        }
+      },
+      {
+        "id": "m34122",
+        "from": "memory:M6.0",
+        "to": "p-ombstx-offline-0000000E--FC235--r182:actual:L1.3",
+        "kind": "argument-preparation",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 182,
+          "parameter": "FW_TJ",
+          "callId": "p-ombstx-offline-0000000E--FC235--r182",
+          "readRow": 141
+        }
+      },
+      {
+        "id": "m34123",
+        "from": "memory:M6.1",
+        "to": "p-ombstx-offline-0000000E--FC235--r182:actual:L1.3",
+        "kind": "argument-preparation",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 182,
+          "parameter": "FW_TJ",
+          "callId": "p-ombstx-offline-0000000E--FC235--r182",
+          "readRow": 142
+        }
+      },
+      {
+        "id": "m34125",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--FC235--r182:actual:L1.3",
+        "kind": "argument-preparation",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 182,
+          "parameter": "FW_TJ",
+          "callId": "p-ombstx-offline-0000000E--FC235--r182",
+          "readRow": 146
+        }
+      },
+      {
+        "id": "m34129",
+        "from": "memory:M145.0",
+        "to": "p-ombstx-offline-0000000E--FC235--r182:actual:L1.3",
+        "kind": "argument-preparation",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 182,
+          "parameter": "FW_TJ",
+          "callId": "p-ombstx-offline-0000000E--FC235--r182",
+          "readRow": 151
+        }
+      },
+      {
+        "id": "m34146",
+        "from": "p-ombstx-offline-0000000E--FC235--r182:#M_FW",
+        "to": "memory:Q1652.0",
+        "kind": "parameter-out",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 182,
+          "parameter": "M_FW",
+          "callId": "p-ombstx-offline-0000000E--FC235--r182"
+        }
+      },
+      {
+        "id": "m34151",
+        "from": "p-ombstx-offline-0000000E--FC235--r182:#FW_TJ",
+        "to": "p-ombstx-offline-0000000E--FC235--r182:#M_FW",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC156",
+          "network": 2,
+          "row": 21,
+          "readRow": 12,
+          "callId": "p-ombstx-offline-0000000E--FC235--r182"
+        }
+      },
+      {
+        "id": "m42958",
+        "from": "memory:M2.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r7:write204:L0.4",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 12,
+          "row": 204,
+          "readRow": 203,
+          "callId": "p-ombstx-offline-0000000E--OB1--r7"
+        }
+      },
+      {
+        "id": "m42963",
+        "from": "memory:M2.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r7:write682:L0.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC200",
+          "network": 18,
+          "row": 682,
+          "readRow": 680,
+          "callId": "p-ombstx-offline-0000000E--OB1--r7"
+        }
+      },
+      {
+        "id": "m43496",
+        "from": "memory:M6.0",
+        "to": "p-ombstx-offline-0000000E--OB1--r12:write162:L1.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 162,
+          "readRow": 141,
+          "callId": "p-ombstx-offline-0000000E--OB1--r12"
+        }
+      },
+      {
+        "id": "m43497",
+        "from": "memory:M6.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r12:write162:L1.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 162,
+          "readRow": 142,
+          "callId": "p-ombstx-offline-0000000E--OB1--r12"
+        }
+      },
+      {
+        "id": "m43499",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r12:write162:L1.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 162,
+          "readRow": 146,
+          "callId": "p-ombstx-offline-0000000E--OB1--r12"
+        }
+      },
+      {
+        "id": "m43503",
+        "from": "memory:M145.0",
+        "to": "p-ombstx-offline-0000000E--OB1--r12:write162:L1.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC235",
+          "network": 6,
+          "row": 162,
+          "readRow": 151,
+          "callId": "p-ombstx-offline-0000000E--OB1--r12"
+        }
+      },
+      {
+        "id": "m44293",
+        "from": "memory:M6.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write40:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 40,
+          "readRow": 28,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44294",
+        "from": "memory:M6.3",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write40:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 40,
+          "readRow": 29,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44295",
+        "from": "memory:T44",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write40:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 40,
+          "readRow": 34,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44296",
+        "from": "memory:M6.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write40:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 40,
+          "readRow": 36,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44297",
+        "from": "memory:M6.3",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write40:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 40,
+          "readRow": 37,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44301",
+        "from": "memory:M13.7",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 131,
+          "readRow": 111,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44302",
+        "from": "constant:0",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 131,
+          "readRow": 114,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44304",
+        "from": "memory:M6.3",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 131,
+          "readRow": 117,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44306",
+        "from": "constant:0",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 131,
+          "readRow": 121,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44308",
+        "from": "memory:M145.0",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 131,
+          "readRow": 124,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44311",
+        "from": "memory:M6.1",
+        "to": "memory:M6.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 131,
+          "readRow": 130,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44313",
+        "from": "memory:M13.7",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 132,
+          "readRow": 111,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44314",
+        "from": "constant:0",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 132,
+          "readRow": 114,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44316",
+        "from": "memory:M6.3",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 132,
+          "readRow": 117,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44318",
+        "from": "constant:0",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 132,
+          "readRow": 121,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44320",
+        "from": "memory:M145.0",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 132,
+          "readRow": 124,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44323",
+        "from": "memory:M6.1",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 132,
+          "readRow": 130,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44325",
+        "from": "memory:M13.7",
+        "to": "memory:M13.7",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 133,
+          "readRow": 111,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44326",
+        "from": "constant:0",
+        "to": "memory:M13.7",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 133,
+          "readRow": 114,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44328",
+        "from": "memory:M6.3",
+        "to": "memory:M13.7",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 133,
+          "readRow": 117,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44330",
+        "from": "constant:0",
+        "to": "memory:M13.7",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 133,
+          "readRow": 121,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44332",
+        "from": "memory:M145.0",
+        "to": "memory:M13.7",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 133,
+          "readRow": 124,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44335",
+        "from": "memory:M6.1",
+        "to": "memory:M13.7",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 2,
+          "row": 133,
+          "readRow": 130,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44342",
+        "from": "memory:M6.1",
+        "to": "memory:T40",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 4,
+          "row": 1004,
+          "readRow": 977,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44349",
+        "from": "constant:0",
+        "to": "memory:T40",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 4,
+          "row": 1004,
+          "readRow": 995,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44355",
+        "from": "memory:M6.1",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 4,
+          "row": 1009,
+          "readRow": 977,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44362",
+        "from": "constant:0",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 4,
+          "row": 1009,
+          "readRow": 995,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44366",
+        "from": "memory:T40",
+        "to": "memory:M6.3",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 4,
+          "row": 1009,
+          "readRow": 1008,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44372",
+        "from": "memory:M400.0",
+        "to": "memory:M400.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1093,
+          "readRow": 1064,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44376",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:M400.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1093,
+          "readRow": 1069,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44378",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:M400.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1093,
+          "readRow": 1074,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44380",
+        "from": "memory:MW17",
+        "to": "memory:M400.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1093,
+          "readRow": 1079,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44382",
+        "from": "memory:MW17",
+        "to": "memory:M400.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1093,
+          "readRow": 1084,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44384",
+        "from": "memory:MW48",
+        "to": "memory:M400.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1093,
+          "readRow": 1089,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44393",
+        "from": "constant:0",
+        "to": "memory:T36",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1142,
+          "readRow": 1097,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44400",
+        "from": "memory:MW17",
+        "to": "memory:T36",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1142,
+          "readRow": 1116,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44402",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:T36",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1142,
+          "readRow": 1121,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44404",
+        "from": "memory:MW17",
+        "to": "memory:T36",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1142,
+          "readRow": 1126,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44406",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:T36",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1142,
+          "readRow": 1131,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44411",
+        "from": "constant:0",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1147,
+          "readRow": 1097,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44418",
+        "from": "memory:MW17",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1147,
+          "readRow": 1116,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44420",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1147,
+          "readRow": 1121,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44422",
+        "from": "memory:MW17",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1147,
+          "readRow": 1126,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44424",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1147,
+          "readRow": 1131,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44427",
+        "from": "memory:T36",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1147,
+          "readRow": 1146,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44429",
+        "from": "constant:0",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1174,
+          "readRow": 1097,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44436",
+        "from": "memory:MW17",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1174,
+          "readRow": 1150,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44438",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1174,
+          "readRow": 1155,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44440",
+        "from": "memory:MW17",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1174,
+          "readRow": 1160,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44442",
+        "from": "memory:DB26.DBW84",
+        "to": "memory:M145.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1174,
+          "readRow": 1165,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44452",
+        "from": "memory:M6.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1238,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44453",
+        "from": "memory:M6.3",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1239,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44454",
+        "from": "memory:M145.0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1241,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44455",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1244,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44457",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1249,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44459",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1254,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44464",
+        "from": "memory:MW17",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1263,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44466",
+        "from": "memory:MW17",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1268,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44469",
+        "from": "memory:M6.0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1278:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1278,
+          "readRow": 1277,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44473",
+        "from": "memory:M6.1",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1238,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44474",
+        "from": "memory:M6.3",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1239,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44475",
+        "from": "memory:M145.0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1241,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44476",
+        "from": "constant:0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1244,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44478",
+        "from": "constant:0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1249,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44480",
+        "from": "constant:0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1254,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44485",
+        "from": "memory:MW17",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1263,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44487",
+        "from": "memory:MW17",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1268,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44490",
+        "from": "memory:M6.0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1281,
+          "readRow": 1277,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44492",
+        "from": "memory:M6.1",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1389,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44493",
+        "from": "memory:M145.0",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1390,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44494",
+        "from": "memory:M6.3",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1391,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44495",
+        "from": "constant:0",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1394,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44497",
+        "from": "constant:0",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1399,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44502",
+        "from": "memory:MW17",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1408,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44504",
+        "from": "memory:MW17",
+        "to": "memory:T97",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1423,
+          "readRow": 1413,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44509",
+        "from": "memory:M6.1",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1389,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44510",
+        "from": "memory:M145.0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1390,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44511",
+        "from": "memory:M6.3",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1391,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44512",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1394,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44514",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1399,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44519",
+        "from": "memory:MW17",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1408,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44521",
+        "from": "memory:MW17",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1413,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44524",
+        "from": "memory:T97",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1427,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44526",
+        "from": "constant:0",
+        "to": "p-ombstx-offline-0000000E--OB1--r19:write1435:L0.1",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1435,
+          "readRow": 1432,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44530",
+        "from": "constant:0",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1554,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44539",
+        "from": "memory:M145.0",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1573,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44540",
+        "from": "constant:0",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1576,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44546",
+        "from": "memory:M6.1",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1590,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44547",
+        "from": "memory:M6.3",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1591,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44548",
+        "from": "memory:M6.1",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1592,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44549",
+        "from": "memory:M6.0",
+        "to": "memory:T22",
+        "kind": "timer-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1596,
+          "readRow": 1594,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44553",
+        "from": "constant:0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1554,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44562",
+        "from": "memory:M145.0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1573,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44563",
+        "from": "constant:0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1576,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44569",
+        "from": "memory:M6.1",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1590,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44570",
+        "from": "memory:M6.3",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1591,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44571",
+        "from": "memory:M6.1",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1592,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44572",
+        "from": "memory:M6.0",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1594,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      },
+      {
+        "id": "m44573",
+        "from": "memory:T22",
+        "to": "memory:M6.0",
+        "kind": "control-dependency",
+        "evidence": {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1601,
+          "readRow": 1600,
+          "callId": "p-ombstx-offline-0000000E--OB1--r19"
+        }
+      }
+    ],
+    "truncated": false,
+    "limits": {
+      "maxDepth": 6,
+      "maxNodes": 90,
+      "maxEdges": 240
+    },
+    "hasCycle": true,
+    "sourceStatus": "potential-writers-found",
+    "sources": [
+      "constant:0"
+    ],
+    "diagnostics": [
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC200",
+        "network": 18,
+        "row": 684,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC200",
+        "network": 18,
+        "row": 690,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 54,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 62,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 70,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 87,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 95,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 103,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 157,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 165,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 184,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 192,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 211,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 219,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 238,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 246,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 265,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 273,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 292,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 300,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 319,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 327,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 346,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 2,
+        "row": 354,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 4,
+        "row": 957,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 4,
+        "row": 972,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 5,
+        "row": 1057,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 5,
+        "row": 1186,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1200,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1207,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1224,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1289,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1299,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1303,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1307,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1315,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1323,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1343,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1351,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1359,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1367,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1375,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1383,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1442,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1454,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1463,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1467,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1471,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1479,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1487,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1506,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1514,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1522,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1530,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1538,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1546,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1610,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1614,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      },
+      {
+        "blockId": "p-ombstx-offline-0000000E--FC239",
+        "network": 6,
+        "row": 1622,
+        "code": "CONTROL_BOUNDARY",
+        "message": "控制转移处停止合并状态；附近赋值仅表示条件性潜在传递。"
+      }
+    ],
+    "semantics": "数据赋值与条件影响的静态潜在关系；控制跳转处分段，不证明路径可执行。调用形参按调用点隔离，未完整展开嵌套调用实例。"
+  },
+  "directBlocks": [
+    {
+      "type": "FC",
+      "symbol": "余料回收338及空箱返库",
+      "rowCount": 1850,
+      "protected": false,
+      "name": "FC239",
+      "status": "parsed",
+      "programId": "p-ombstx-offline-0000000E",
+      "networkCount": 8,
+      "id": "p-ombstx-offline-0000000E--FC239",
+      "description": "",
+      "reads": 16,
+      "writes": 2
+    }
+  ],
+  "references": [
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1059,
+      "kind": "write",
+      "command": "T",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1079,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1084,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1116,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1126,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1150,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 5,
+      "row": 1160,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1263,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1268,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1291,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1316,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1408,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1413,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1439,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1444,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1451,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1480,
+      "kind": "read",
+      "command": "L",
+      "operand": "MW17"
+    },
+    {
+      "blockId": "p-ombstx-offline-0000000E--FC239",
+      "network": 6,
+      "row": 1616,
+      "kind": "write",
+      "command": "T",
+      "operand": "MW17"
+    }
+  ],
+  "referenceTotal": 18,
+  "relatedCalls": [
+    {
+      "call": {
+        "network": 1,
+        "parameters": [],
+        "row": 19,
+        "target": "p-ombstx-offline-0000000E--FC239",
+        "conditional": false,
+        "instance": "",
+        "caller": "p-ombstx-offline-0000000E--OB1",
+        "programId": "p-ombstx-offline-0000000E",
+        "targetName": "FC239",
+        "id": "p-ombstx-offline-0000000E--OB1--r19",
+        "targetStatus": "parsed"
+      },
+      "relation": "callee-direct-reference",
+      "graph": {
+        "call": {
+          "network": 1,
+          "parameters": [],
+          "row": 19,
+          "target": "p-ombstx-offline-0000000E--FC239",
+          "conditional": false,
+          "instance": "",
+          "caller": "p-ombstx-offline-0000000E--OB1",
+          "programId": "p-ombstx-offline-0000000E",
+          "targetName": "FC239",
+          "id": "p-ombstx-offline-0000000E--OB1--r19",
+          "targetStatus": "parsed"
+        },
+        "nodes": [],
+        "edges": [],
+        "warnings": [
+          "此调用没有已还原的参数绑定。"
+        ],
+        "coverage": {
+          "caller": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 1,
+              "row": 20,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 2,
+              "row": 26,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 3,
+              "row": 31,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 5,
+              "row": 45,
+              "message": "该网络未作布尔依赖推导：JNB 01"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 6,
+              "row": 62,
+              "message": "该网络未作布尔依赖推导：JNB 03"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 7,
+              "row": 70,
+              "message": "该网络未作布尔依赖推导：JNB 04"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 9,
+              "row": 78,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 11,
+              "row": 91,
+              "message": "该网络未作布尔依赖推导：L S5T#50s"
+            }
+          ],
+          "callee": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 1,
+              "row": 2,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW1916"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 2,
+              "row": 23,
+              "message": "该网络未作布尔依赖推导：S M6.1"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 3,
+              "row": 362,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW390"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 4,
+              "row": 932,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW390"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 5,
+              "row": 1018,
+              "message": "该网络未作布尔依赖推导：FP M 336.7"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 6,
+              "row": 1194,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 7,
+              "row": 1633,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW1900"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC239",
+              "network": 8,
+              "row": 1767,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW380"
+            }
+          ],
+          "analyzedCalleeNetworks": 0,
+          "totalCalleeNetworks": 8
+        },
+        "semantics": "单个调用点的潜在布尔依赖；未证明当前执行条件或现场因果。不同调用点不会合并。",
+        "truncated": false,
+        "matched": false
+      },
+      "calleeReferences": [
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1059,
+          "kind": "write",
+          "command": "T",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1079,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1084,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1116,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1126,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1150,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 5,
+          "row": 1160,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1263,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1268,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1291,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1316,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1408,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1413,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1439,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1444,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1451,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1480,
+          "kind": "read",
+          "command": "L",
+          "operand": "MW17"
+        },
+        {
+          "blockId": "p-ombstx-offline-0000000E--FC239",
+          "network": 6,
+          "row": 1616,
+          "kind": "write",
+          "command": "T",
+          "operand": "MW17"
+        }
+      ]
+    },
+    {
+      "call": {
+        "network": 12,
+        "parameters": [
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 0.0",
+            "comment": "",
+            "name": "SB_Mute"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 0.1",
+            "comment": "",
+            "name": "OP_EMS"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 0.2",
+            "comment": "",
+            "name": "AUTO"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 0.3",
+            "comment": "",
+            "name": "OP_Fault_ACK"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 0.4",
+            "comment": "",
+            "name": "OP_FAULT"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 0.5",
+            "comment": "",
+            "name": "T_PULSE"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1010.0",
+            "comment": "",
+            "name": "OP_EMS_Dis"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1010.1",
+            "comment": "",
+            "name": "OP_Mute_Dis"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1010.2",
+            "comment": "",
+            "name": "OP_GREEN_LAMP"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1010.3",
+            "comment": "",
+            "name": "OP_YELLOW_LAMP"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1010.4",
+            "comment": "",
+            "name": "OP_RED_LAMP"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1010.5",
+            "comment": "",
+            "name": "OP_HA"
+          },
+          {
+            "direction": "IN_OUT",
+            "type": "BOOL",
+            "value": "M 25.1",
+            "comment": "",
+            "name": "AD_CONTROL_BIT"
+          }
+        ],
+        "row": 209,
+        "target": "p-ombstx-offline-0000000E--FC159",
+        "conditional": false,
+        "instance": "",
+        "caller": "p-ombstx-offline-0000000E--FC200",
+        "programId": "p-ombstx-offline-0000000E",
+        "targetName": "FC159",
+        "id": "p-ombstx-offline-0000000E--FC200--r209",
+        "targetStatus": "parsed"
+      },
+      "relation": "mapped-memory-flow",
+      "graph": {
+        "call": {
+          "network": 12,
+          "parameters": [
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 0.0",
+              "comment": "",
+              "name": "SB_Mute"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 0.1",
+              "comment": "",
+              "name": "OP_EMS"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 0.2",
+              "comment": "",
+              "name": "AUTO"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 0.3",
+              "comment": "",
+              "name": "OP_Fault_ACK"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 0.4",
+              "comment": "",
+              "name": "OP_FAULT"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 0.5",
+              "comment": "",
+              "name": "T_PULSE"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1010.0",
+              "comment": "",
+              "name": "OP_EMS_Dis"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1010.1",
+              "comment": "",
+              "name": "OP_Mute_Dis"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1010.2",
+              "comment": "",
+              "name": "OP_GREEN_LAMP"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1010.3",
+              "comment": "",
+              "name": "OP_YELLOW_LAMP"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1010.4",
+              "comment": "",
+              "name": "OP_RED_LAMP"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1010.5",
+              "comment": "",
+              "name": "OP_HA"
+            },
+            {
+              "direction": "IN_OUT",
+              "type": "BOOL",
+              "value": "M 25.1",
+              "comment": "",
+              "name": "AD_CONTROL_BIT"
+            }
+          ],
+          "row": 209,
+          "target": "p-ombstx-offline-0000000E--FC159",
+          "conditional": false,
+          "instance": "",
+          "caller": "p-ombstx-offline-0000000E--FC200",
+          "programId": "p-ombstx-offline-0000000E",
+          "targetName": "FC159",
+          "id": "p-ombstx-offline-0000000E--FC200--r209",
+          "targetStatus": "parsed"
+        },
+        "nodes": [],
+        "edges": [],
+        "warnings": [],
+        "coverage": {
+          "caller": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 3,
+              "row": 10,
+              "message": "该网络未作布尔依赖推导：L 0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 4,
+              "row": 15,
+              "message": "该网络未作布尔依赖推导：L S5T#1s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 5,
+              "row": 24,
+              "message": "该网络未作布尔依赖推导：L S5T#1s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 6,
+              "row": 33,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 7,
+              "row": 42,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 8,
+              "row": 150,
+              "message": "该网络未作布尔依赖推导：JNB M000"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 14,
+              "row": 533,
+              "message": "该网络未作布尔依赖推导：L S5T#15s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 15,
+              "row": 562,
+              "message": "该网络未作布尔依赖推导：L S5T#15s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 17,
+              "row": 633,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW4960"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 18,
+              "row": 684,
+              "message": "该网络未作布尔依赖推导：JNB M001"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 19,
+              "row": 697,
+              "message": "该网络未作布尔依赖推导：S M 774.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 20,
+              "row": 702,
+              "message": "该网络未作布尔依赖推导：R M 774.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 21,
+              "row": 706,
+              "message": "该网络未作布尔依赖推导：S M 775.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 22,
+              "row": 711,
+              "message": "该网络未作布尔依赖推导：R M 775.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 23,
+              "row": 715,
+              "message": "该网络未作布尔依赖推导：S M 776.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 24,
+              "row": 720,
+              "message": "该网络未作布尔依赖推导：R M 776.0"
+            }
+          ],
+          "callee": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC159",
+              "network": 4,
+              "row": 25,
+              "message": "该网络未作布尔依赖推导：S #AD_CONTROL_BIT"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC159",
+              "network": 5,
+              "row": 40,
+              "message": "该网络未作布尔依赖推导：R #AD_CONTROL_BIT"
+            }
+          ],
+          "analyzedCalleeNetworks": 3,
+          "totalCalleeNetworks": 5
+        },
+        "semantics": "单个调用点的潜在布尔依赖；未证明当前执行条件或现场因果。不同调用点不会合并。",
+        "truncated": false,
+        "matched": false
+      },
+      "calleeReferences": []
+    },
+    {
+      "call": {
+        "network": 6,
+        "parameters": [
+          {
+            "direction": "IN",
+            "type": "INT",
+            "value": "426",
+            "comment": "",
+            "name": "M_NO"
+          },
+          {
+            "direction": "IN",
+            "type": "INT",
+            "value": "100",
+            "comment": "",
+            "name": "NEXT_M_NO"
+          },
+          {
+            "direction": "IN",
+            "type": "INT",
+            "value": "200",
+            "comment": "",
+            "name": "M_NO_Offset"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.0",
+            "comment": "",
+            "name": "READY_X"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.1",
+            "comment": "",
+            "name": "M_GZ"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.2",
+            "comment": "",
+            "name": "OP_AUTO"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.3",
+            "comment": "",
+            "name": "FW_TJ"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.4",
+            "comment": "",
+            "name": "BW_TJ"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.5",
+            "comment": "",
+            "name": "M_QS"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.6",
+            "comment": "",
+            "name": "OP_FW"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 1.7",
+            "comment": "",
+            "name": "OP_BW"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 2.0",
+            "comment": "",
+            "name": "M_Select"
+          },
+          {
+            "direction": "IN",
+            "type": "BOOL",
+            "value": "L 2.1",
+            "comment": "",
+            "name": "M_TO_M1"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "A 1652.0",
+            "comment": "",
+            "name": "M_FW"
+          },
+          {
+            "direction": "OUT",
+            "type": "BOOL",
+            "value": "L 0.0",
+            "comment": "",
+            "name": "M_BW"
+          }
+        ],
+        "row": 182,
+        "target": "p-ombstx-offline-0000000E--FC156",
+        "conditional": false,
+        "instance": "",
+        "caller": "p-ombstx-offline-0000000E--FC235",
+        "programId": "p-ombstx-offline-0000000E",
+        "targetName": "FC156",
+        "id": "p-ombstx-offline-0000000E--FC235--r182",
+        "targetStatus": "parsed"
+      },
+      "relation": "mapped-memory-flow",
+      "graph": {
+        "call": {
+          "network": 6,
+          "parameters": [
+            {
+              "direction": "IN",
+              "type": "INT",
+              "value": "426",
+              "comment": "",
+              "name": "M_NO"
+            },
+            {
+              "direction": "IN",
+              "type": "INT",
+              "value": "100",
+              "comment": "",
+              "name": "NEXT_M_NO"
+            },
+            {
+              "direction": "IN",
+              "type": "INT",
+              "value": "200",
+              "comment": "",
+              "name": "M_NO_Offset"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.0",
+              "comment": "",
+              "name": "READY_X"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.1",
+              "comment": "",
+              "name": "M_GZ"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.2",
+              "comment": "",
+              "name": "OP_AUTO"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.3",
+              "comment": "",
+              "name": "FW_TJ"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.4",
+              "comment": "",
+              "name": "BW_TJ"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.5",
+              "comment": "",
+              "name": "M_QS"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.6",
+              "comment": "",
+              "name": "OP_FW"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 1.7",
+              "comment": "",
+              "name": "OP_BW"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 2.0",
+              "comment": "",
+              "name": "M_Select"
+            },
+            {
+              "direction": "IN",
+              "type": "BOOL",
+              "value": "L 2.1",
+              "comment": "",
+              "name": "M_TO_M1"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "A 1652.0",
+              "comment": "",
+              "name": "M_FW"
+            },
+            {
+              "direction": "OUT",
+              "type": "BOOL",
+              "value": "L 0.0",
+              "comment": "",
+              "name": "M_BW"
+            }
+          ],
+          "row": 182,
+          "target": "p-ombstx-offline-0000000E--FC156",
+          "conditional": false,
+          "instance": "",
+          "caller": "p-ombstx-offline-0000000E--FC235",
+          "programId": "p-ombstx-offline-0000000E",
+          "targetName": "FC156",
+          "id": "p-ombstx-offline-0000000E--FC235--r182",
+          "targetStatus": "parsed"
+        },
+        "nodes": [],
+        "edges": [],
+        "warnings": [
+          "实参 L1.0 的上游未解析（READY_X）。",
+          "实参 L1.1 的上游未解析（M_GZ）。",
+          "实参 L1.2 的上游未解析（OP_AUTO）。",
+          "实参 L1.3 的上游未解析（FW_TJ）。",
+          "实参 L1.4 的上游未解析（BW_TJ）。",
+          "实参 L1.5 的上游未解析（M_QS）。",
+          "实参 L1.6 的上游未解析（OP_FW）。",
+          "实参 L1.7 的上游未解析（OP_BW）。",
+          "实参 L2.0 的上游未解析（M_Select）。",
+          "实参 L2.1 的上游未解析（M_TO_M1）。"
+        ],
+        "coverage": {
+          "caller": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC235",
+              "network": 2,
+              "row": 44,
+              "message": "该网络未作布尔依赖推导：FN M 78.3"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC235",
+              "network": 6,
+              "row": 145,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW1900"
+            }
+          ],
+          "callee": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC156",
+              "network": 1,
+              "row": 4,
+              "message": "该网络未作布尔依赖推导：JNB _001"
+            }
+          ],
+          "analyzedCalleeNetworks": 2,
+          "totalCalleeNetworks": 3
+        },
+        "semantics": "单个调用点的潜在布尔依赖；未证明当前执行条件或现场因果。不同调用点不会合并。",
+        "truncated": false,
+        "matched": false
+      },
+      "calleeReferences": []
+    },
+    {
+      "call": {
+        "network": 1,
+        "parameters": [],
+        "row": 7,
+        "target": "p-ombstx-offline-0000000E--FC200",
+        "conditional": false,
+        "instance": "",
+        "caller": "p-ombstx-offline-0000000E--OB1",
+        "programId": "p-ombstx-offline-0000000E",
+        "targetName": "FC200",
+        "id": "p-ombstx-offline-0000000E--OB1--r7",
+        "targetStatus": "parsed"
+      },
+      "relation": "mapped-memory-flow",
+      "graph": {
+        "call": {
+          "network": 1,
+          "parameters": [],
+          "row": 7,
+          "target": "p-ombstx-offline-0000000E--FC200",
+          "conditional": false,
+          "instance": "",
+          "caller": "p-ombstx-offline-0000000E--OB1",
+          "programId": "p-ombstx-offline-0000000E",
+          "targetName": "FC200",
+          "id": "p-ombstx-offline-0000000E--OB1--r7",
+          "targetStatus": "parsed"
+        },
+        "nodes": [],
+        "edges": [],
+        "warnings": [
+          "此调用没有已还原的参数绑定。"
+        ],
+        "coverage": {
+          "caller": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 1,
+              "row": 20,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 2,
+              "row": 26,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 3,
+              "row": 31,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 5,
+              "row": 45,
+              "message": "该网络未作布尔依赖推导：JNB 01"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 6,
+              "row": 62,
+              "message": "该网络未作布尔依赖推导：JNB 03"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 7,
+              "row": 70,
+              "message": "该网络未作布尔依赖推导：JNB 04"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 9,
+              "row": 78,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 11,
+              "row": 91,
+              "message": "该网络未作布尔依赖推导：L S5T#50s"
+            }
+          ],
+          "callee": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 3,
+              "row": 10,
+              "message": "该网络未作布尔依赖推导：L 0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 4,
+              "row": 15,
+              "message": "该网络未作布尔依赖推导：L S5T#1s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 5,
+              "row": 24,
+              "message": "该网络未作布尔依赖推导：L S5T#1s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 6,
+              "row": 33,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 7,
+              "row": 42,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 8,
+              "row": 150,
+              "message": "该网络未作布尔依赖推导：JNB M000"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 14,
+              "row": 533,
+              "message": "该网络未作布尔依赖推导：L S5T#15s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 15,
+              "row": 562,
+              "message": "该网络未作布尔依赖推导：L S5T#15s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 17,
+              "row": 633,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW4960"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 18,
+              "row": 684,
+              "message": "该网络未作布尔依赖推导：JNB M001"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 19,
+              "row": 697,
+              "message": "该网络未作布尔依赖推导：S M 774.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 20,
+              "row": 702,
+              "message": "该网络未作布尔依赖推导：R M 774.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 21,
+              "row": 706,
+              "message": "该网络未作布尔依赖推导：S M 775.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 22,
+              "row": 711,
+              "message": "该网络未作布尔依赖推导：R M 775.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 23,
+              "row": 715,
+              "message": "该网络未作布尔依赖推导：S M 776.0"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC200",
+              "network": 24,
+              "row": 720,
+              "message": "该网络未作布尔依赖推导：R M 776.0"
+            }
+          ],
+          "analyzedCalleeNetworks": 8,
+          "totalCalleeNetworks": 24
+        },
+        "semantics": "单个调用点的潜在布尔依赖；未证明当前执行条件或现场因果。不同调用点不会合并。",
+        "truncated": false,
+        "matched": false
+      },
+      "calleeReferences": []
+    },
+    {
+      "call": {
+        "network": 1,
+        "parameters": [],
+        "row": 12,
+        "target": "p-ombstx-offline-0000000E--FC235",
+        "conditional": false,
+        "instance": "",
+        "caller": "p-ombstx-offline-0000000E--OB1",
+        "programId": "p-ombstx-offline-0000000E",
+        "targetName": "FC235",
+        "id": "p-ombstx-offline-0000000E--OB1--r12",
+        "targetStatus": "parsed"
+      },
+      "relation": "mapped-memory-flow",
+      "graph": {
+        "call": {
+          "network": 1,
+          "parameters": [],
+          "row": 12,
+          "target": "p-ombstx-offline-0000000E--FC235",
+          "conditional": false,
+          "instance": "",
+          "caller": "p-ombstx-offline-0000000E--OB1",
+          "programId": "p-ombstx-offline-0000000E",
+          "targetName": "FC235",
+          "id": "p-ombstx-offline-0000000E--OB1--r12",
+          "targetStatus": "parsed"
+        },
+        "nodes": [],
+        "edges": [],
+        "warnings": [
+          "此调用没有已还原的参数绑定。"
+        ],
+        "coverage": {
+          "caller": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 1,
+              "row": 20,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 2,
+              "row": 26,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 3,
+              "row": 31,
+              "message": "该网络未作布尔依赖推导：L S5T#3s"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 5,
+              "row": 45,
+              "message": "该网络未作布尔依赖推导：JNB 01"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 6,
+              "row": 62,
+              "message": "该网络未作布尔依赖推导：JNB 03"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 7,
+              "row": 70,
+              "message": "该网络未作布尔依赖推导：JNB 04"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 9,
+              "row": 78,
+              "message": "该网络未作布尔依赖推导： "
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--OB1",
+              "network": 11,
+              "row": 91,
+              "message": "该网络未作布尔依赖推导：L S5T#50s"
+            }
+          ],
+          "callee": [
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC235",
+              "network": 2,
+              "row": 44,
+              "message": "该网络未作布尔依赖推导：FN M 78.3"
+            },
+            {
+              "code": "UNSUPPORTED_NETWORK",
+              "blockId": "p-ombstx-offline-0000000E--FC235",
+              "network": 6,
+              "row": 145,
+              "message": "该网络未作布尔依赖推导：L DB8.DBW1900"
+            }
+          ],
+          "analyzedCalleeNetworks": 4,
+          "totalCalleeNetworks": 6
+        },
+        "semantics": "单个调用点的潜在布尔依赖；未证明当前执行条件或现场因果。不同调用点不会合并。",
+        "truncated": false,
+        "matched": false
+      },
+      "calleeReferences": []
+    }
+  ],
+  "totalCalls": 5,
+  "truncated": false,
+  "coverage": {
+    "parsedBlocks": 160,
+    "protectedBlocks": 13,
+    "unavailableBlocks": 142
+  },
+  "warnings": [
+    "流程图包括可识别的 L/T 数值赋值、算术操作数、比较和布尔条件、调用参数绑定。连线是潜在数据或条件影响，不代表相同数值直接复制。",
+    "控制转移处停止合并状态；间接寻址、地址重叠和完整嵌套调用实例尚未展开。来源未解析不等于没有来源。",
+    "未列出调用关系不代表没有影响；同一调用内其他逻辑条件仍需查看指令证据。",
+    "部分功能块直接使用此地址，已列出调用位置，但尚未还原该块内部到输出的完整路径。"
+  ],
+  "semantics": "点位的静态使用位置和逐调用点潜在流向，不是实时值或确定因果。",
+  "context": {
+    "apiVersion": "1.0",
+    "projectId": "l0226d02",
+    "snapshotId": "097c29834d72ea77fe98b28a1dc05fd9acffa099a85a9343cca0c7165bf085e7",
+    "analysisMode": "offline-static"
+  }
+}

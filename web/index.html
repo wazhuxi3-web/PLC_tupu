@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>STEP7 · 程序图谱工作台</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div class="brand">S7<span>程序图谱工作台</span></div><div class="status">● 本地离线分析 <span>· 接口已预留</span></div></header>
+<main>
+  <section class="intro"><div><div class="eyebrow">STEP7 PROGRAM EXPLORER / 0.2 · OFFLINE</div><h1 id="title">正在读取工程…</h1><p id="subtitle">程序关系有迹可循。</p></div><div class="stamp" id="stamp"></div></section>
+  <section class="import-card" aria-label="选择 PLC 工程文件夹"><div class="section-head"><div><h2>打开 PLC 工程</h2><p>选择完整 STEP7 工程文件夹，保留 .S7P 文件与配套目录。</p></div><button id="browse-folder">选择文件夹…</button></div><form id="folder-form"><label for="folder-path">文件夹位置（也可直接粘贴路径）</label><div class="folder-input"><input id="folder-path" placeholder="C:\PLC项目\工程名称"><button type="submit" id="inspect-folder">识别工程</button></div></form><div id="project-candidates" hidden><div class="import-options"><label>工程入口<select id="project-file"></select></label><label>文本编码<select id="code-page"><option value="936">简体中文 · CP936</option><option value="1252">西欧 · Windows-1252</option><option value="65001">UTF-8</option></select></label><button id="import-project">导入并打开</button></div></div><p id="import-message" class="small" role="status">导入在本机完成，原工程保持只读。运行无需联网。</p><progress id="import-progress" hidden aria-label="工程导入进度"></progress></section>
+  <section class="metrics" id="metrics"></section>
+  <div id="error" role="alert" hidden></div>
+  <section class="workspace">
+    <aside><label for="program">程序 / CPU</label><select id="program"></select><label for="block-search">查找程序块</label><input id="block-search" placeholder="FC156、FC231、中文说明…"><div class="small" id="block-count"></div><div id="blocks" class="block-list"></div></aside>
+    <article>
+      <nav aria-label="视图"><button class="active" data-tab="point">点位追踪</button><button data-tab="calls">调用图谱</button><button data-tab="parameters">参数流</button><button data-tab="symbols">符号与读写</button><button data-tab="coverage">解析范围</button></nav>
+      <section id="point" class="panel"><div class="section-head"><div><h2>输入点位，查找使用位置和流向</h2><p>选择左侧程序 / CPU，输入完整地址或符号名。</p></div></div><form id="point-form"><label for="point-query">点位地址或符号</label><div class="folder-input"><input id="point-query" placeholder="例如 I920.0、Q1420.0 或 QS310"><button id="point-submit" type="submit">追踪点位</button></div></form><p class="notice">自动列出直接读写块和能还原的功能块调用路径。间接寻址、复杂控制流和保护块仍可能造成缺失。</p><div id="point-results"><p class="empty">输入点位后开始追踪。</p></div></section>
+      <section id="calls" class="panel" hidden><div class="section-head"><div><h2 id="block-title">选择程序块</h2><p id="block-description"></p></div><button id="open-block">查看块指令 / 接口</button></div><p class="hint">显示选中块的直接调用者和被调用者。每个调用点分别保留。</p><div id="call-graph" class="call-graph"></div><h3>调用位置与参数</h3><div id="call-list"></div></section>
+      <section id="parameters" class="panel" hidden><div class="section-head"><div><h2>参数流追踪</h2><p>从调用实参进入功能块，再追踪到输出。</p></div><button id="example">打开设备 310 验证案例</button></div><div class="controls"><label>调用点<select id="call-select"></select></label><label>关注参数<select id="param-focus"><option value="">全部参数</option></select></label><label>追踪方向<select id="direction"><option value="both">上游 + 下游</option><option value="upstream">只看上游</option><option value="downstream">只看下游</option></select></label></div><p class="notice">连线表示静态潜在依赖，不代表 PLC 当前值或故障原因。当前按单个调用点展开。</p><div class="legend"><span>① 实参来源</span><span>② 调用前实参</span><span>③ 形参输入</span><span>④ 形参输出</span><span>⑤ 实际输出</span></div><div class="graph-scroll"><svg id="flow" role="img" aria-label="参数依赖图"></svg></div><div id="flow-summary" class="small"></div><div id="flow-warnings"></div><h3>图中关系的指令证据</h3><div id="flow-evidence"></div><h3>当前调用的参数绑定</h3><div id="bindings"></div></section>
+      <section id="symbols" class="panel" hidden><div class="section-head"><div><h2>符号与读写位置</h2><p>在当前程序内搜索地址、符号和中文注释。</p></div></div><form id="symbol-form"><input id="symbol-search" placeholder="例如 QS310、I920.0、隔离开关"><button type="submit">查找</button></form><div id="symbol-results"></div><h3>读写引用</h3><p class="hint">查找直接地址和调用参数；暂不合并字节/字/双字重叠地址，也不推断间接寻址。</p><div id="references"></div></section>
+      <section id="coverage" class="panel" hidden><h2>解析范围与未完成项</h2><p>保留缺失信息，避免把“没有解析到”误认为“没有影响”。</p><div id="coverage-content"></div></section>
+    </article>
+  </section>
+  <footer>读取引擎 · DotNetSiemensPLCToolBoxLibrary 4.4.10 <span>工程数据保存在本机 · 无在线 PLC 操作</span></footer>
+</main>
+<dialog id="evidence"><div class="section-head"><h2 id="evidence-title">指令证据</h2><button id="close-evidence">关闭</button></div><p class="hint">下列序号为反编译后的指令序号，不是原始源码行号。</p><div id="evidence-content"></div></dialog>
+<script type="module" src="/app.js"></script>
+</body></html>

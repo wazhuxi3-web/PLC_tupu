@@ -1,0 +1,6 @@
+.tools/
+vendor/
+data/
+node_modules/
+*.log
+release/

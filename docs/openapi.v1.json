@@ -1,0 +1,1667 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "STEP7 Offline Explorer Read API",
+    "version": "1.0.0",
+    "description": "Prepared for future Dify integration. Local-only; no workflow/model connection. Static potential dependencies are not runtime state or established causality. All IDs are scoped by projectId + snapshotId. Instruction row numbers are decoded instruction indices, not original source lines."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:4173",
+      "description": "Current local-only deployment"
+    }
+  ],
+  "paths": {
+    "/api/v1/project": {
+      "get": {
+        "operationId": "getProject",
+        "summary": "Get current project context, programs, block inventory and limitations",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Project"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/point": {
+      "get": {
+        "operationId": "tracePoint",
+        "summary": "Trace a point or exact symbol: direct usages, related call sites and upstream/downstream value or condition dependencies",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context; use together with snapshotId.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "snapshotId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context. Reject stale contexts.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "program",
+            "in": "query",
+            "description": "Program id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Exact symbol or address, e.g. MW17. Ambiguous symbols return candidates.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PointReport"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/block": {
+      "get": {
+        "operationId": "getBlock",
+        "summary": "Get decoded instructions and interface; unavailable/protected blocks return 404",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context; use together with snapshotId.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "snapshotId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context. Reject stale contexts.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Block id from inventory or evidence.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Block"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/calls": {
+      "get": {
+        "operationId": "getCalls",
+        "summary": "Get direct call sites; capped at 160 edges, no pagination in v1",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context; use together with snapshotId.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "snapshotId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context. Reject stale contexts.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "program",
+            "in": "query",
+            "description": "Program id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "focus",
+            "in": "query",
+            "description": "Optional block id from this program. Omit to query its call inventory.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CallGraph"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/symbols": {
+      "get": {
+        "operationId": "searchSymbols",
+        "summary": "Search symbol name, normalized address or comment; capped at 120",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context; use together with snapshotId.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "snapshotId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context. Reject stale contexts.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "program",
+            "in": "query",
+            "description": "Program id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Search term; empty returns first 120 symbols.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Symbols"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/references": {
+      "get": {
+        "operationId": "getReferences",
+        "summary": "Exact direct address / exact symbol references; capped at 300",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context; use together with snapshotId.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "snapshotId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context. Reject stale contexts.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "program",
+            "in": "query",
+            "description": "Program id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Exact symbol name or direct address. No indirect or overlapping address inference.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/References"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/parameters": {
+      "get": {
+        "operationId": "traceParameters",
+        "summary": "Get a single-call potential Boolean dependency graph",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context; use together with snapshotId.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "snapshotId",
+            "in": "query",
+            "description": "Copy verbatim from getProject.context. Reject stale contexts.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "call",
+            "in": "query",
+            "description": "Exact call-site id from getCalls.edges; do not synthesize.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "focus",
+            "in": "query",
+            "description": "Parameter name, node id or normalized address. Empty returns all call bindings.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "query",
+            "description": "Traversal relative to focus; ignored when focus empty.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "upstream",
+                "downstream",
+                "both"
+              ],
+              "default": "both"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Query result. Inspect warnings, coverage and truncation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParameterGraph"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing context or invalid arguments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unavailable block, program or call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "No imported project or context no longer current.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Local service read error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Context": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "enum": [
+              "1.0"
+            ]
+          },
+          "projectId": {
+            "type": "string",
+            "nullable": true
+          },
+          "snapshotId": {
+            "type": "string",
+            "nullable": true
+          },
+          "analysisMode": {
+            "type": "string",
+            "enum": [
+              "offline-static"
+            ]
+          }
+        },
+        "required": [
+          "apiVersion",
+          "projectId",
+          "snapshotId",
+          "analysisMode"
+        ],
+        "additionalProperties": true
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          }
+        },
+        "required": [
+          "error",
+          "code",
+          "context"
+        ],
+        "additionalProperties": true
+      },
+      "Evidence": {
+        "type": "object",
+        "properties": {
+          "blockId": {
+            "type": "string"
+          },
+          "network": {
+            "type": "integer"
+          },
+          "row": {
+            "type": "integer"
+          },
+          "readRow": {
+            "type": "integer"
+          },
+          "parameter": {
+            "type": "string"
+          },
+          "callId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "blockId",
+          "network",
+          "row"
+        ],
+        "additionalProperties": true
+      },
+      "Parameter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "direction": {
+            "type": "string",
+            "description": "Normally IN, OUT, IN_OUT. Unknown values must not be guessed."
+          },
+          "type": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "value",
+          "direction"
+        ],
+        "additionalProperties": true
+      },
+      "Call": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "programId": {
+            "type": "string"
+          },
+          "caller": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "targetName": {
+            "type": "string"
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          },
+          "row": {
+            "type": "integer"
+          },
+          "network": {
+            "type": "integer"
+          },
+          "targetStatus": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Parameter"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "programId",
+          "caller",
+          "target",
+          "row",
+          "network",
+          "parameters"
+        ],
+        "additionalProperties": true
+      },
+      "BlockSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "programId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "parsed",
+              "protected",
+              "failed",
+              "metadata-only",
+              "unresolved"
+            ]
+          },
+          "networkCount": {
+            "type": "integer"
+          },
+          "rowCount": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "status"
+        ],
+        "additionalProperties": true
+      },
+      "Program": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "station": {
+            "type": "string"
+          },
+          "cpu": {
+            "type": "string"
+          },
+          "symbolCount": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "symbolCount"
+        ],
+        "additionalProperties": true
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "empty": {
+            "type": "boolean"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "snapshotId": {
+            "type": "string"
+          },
+          "projectName": {
+            "type": "string"
+          },
+          "sourcePath": {
+            "type": "string"
+          },
+          "importedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "programs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Program"
+            }
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlockSummary"
+            }
+          },
+          "callCount": {
+            "type": "integer"
+          },
+          "diagnostics": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "savedSources": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "context"
+        ],
+        "additionalProperties": true
+      },
+      "Interface": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "isArray": {
+            "type": "boolean"
+          },
+          "arrayStart": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "nullable": true
+            }
+          },
+          "arrayStop": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "nullable": true
+            }
+          },
+          "byteLength": {
+            "type": "integer"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Interface"
+            }
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "Instruction": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer"
+          },
+          "network": {
+            "type": "integer"
+          },
+          "command": {
+            "type": "string"
+          },
+          "operand": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Parameter"
+            }
+          }
+        },
+        "required": [
+          "index",
+          "network",
+          "command",
+          "operand",
+          "parameters"
+        ],
+        "additionalProperties": true
+      },
+      "Block": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "interface": {
+            "$ref": "#/components/schemas/Interface"
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Instruction"
+            }
+          }
+        },
+        "required": [
+          "context",
+          "id",
+          "name",
+          "rows"
+        ],
+        "additionalProperties": true
+      },
+      "CallGraph": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlockSummary"
+            }
+          },
+          "edges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Call"
+            }
+          },
+          "total": {
+            "type": "integer"
+          },
+          "truncated": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "context",
+          "nodes",
+          "edges",
+          "total",
+          "truncated"
+        ],
+        "additionalProperties": true
+      },
+      "Symbol": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "operand": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "operand"
+        ],
+        "additionalProperties": true
+      },
+      "Symbols": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Symbol"
+            }
+          },
+          "total": {
+            "type": "integer"
+          },
+          "truncated": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "context",
+          "items",
+          "total",
+          "truncated"
+        ],
+        "additionalProperties": true
+      },
+      "Reference": {
+        "type": "object",
+        "properties": {
+          "blockId": {
+            "type": "string"
+          },
+          "network": {
+            "type": "integer"
+          },
+          "row": {
+            "type": "integer"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "read",
+              "write",
+              "read-write"
+            ]
+          },
+          "command": {
+            "type": "string"
+          },
+          "parameter": {
+            "type": "string"
+          },
+          "operand": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "blockId",
+          "network",
+          "row",
+          "kind",
+          "operand"
+        ],
+        "additionalProperties": true
+      },
+      "References": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "operand": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Reference"
+            }
+          },
+          "total": {
+            "type": "integer"
+          },
+          "truncated": {
+            "type": "boolean"
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "context",
+          "operand",
+          "items",
+          "total",
+          "truncated",
+          "scope"
+        ],
+        "additionalProperties": true
+      },
+      "FlowNode": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "column": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4
+          },
+          "operand": {
+            "type": "string"
+          },
+          "parameter": {
+            "type": "string"
+          },
+          "direction": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "column"
+        ],
+        "additionalProperties": true
+      },
+      "FlowEdge": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "parameter-in",
+              "parameter-out",
+              "boolean-preparation",
+              "potential-boolean-dependency"
+            ]
+          },
+          "evidence": {
+            "$ref": "#/components/schemas/Evidence"
+          }
+        },
+        "required": [
+          "id",
+          "from",
+          "to",
+          "kind",
+          "evidence"
+        ],
+        "additionalProperties": true
+      },
+      "Diagnostic": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "blockId": {
+            "type": "string"
+          },
+          "network": {
+            "type": "integer"
+          },
+          "row": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "blockId",
+          "network",
+          "message"
+        ],
+        "additionalProperties": true
+      },
+      "Coverage": {
+        "type": "object",
+        "properties": {
+          "caller": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Diagnostic"
+            }
+          },
+          "callee": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Diagnostic"
+            }
+          },
+          "analyzedCalleeNetworks": {
+            "type": "integer"
+          },
+          "totalCalleeNetworks": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "caller",
+          "callee",
+          "analyzedCalleeNetworks",
+          "totalCalleeNetworks"
+        ],
+        "additionalProperties": true
+      },
+      "ParameterGraph": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "call": {
+            "$ref": "#/components/schemas/Call"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlowNode"
+            }
+          },
+          "edges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlowEdge"
+            }
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/Coverage"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "semantics": {
+            "type": "string"
+          },
+          "truncated": {
+            "type": "boolean"
+          },
+          "matched": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "call",
+          "nodes",
+          "edges",
+          "coverage",
+          "warnings",
+          "semantics",
+          "truncated"
+        ],
+        "additionalProperties": true
+      },
+      "MemoryNode": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "operand": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "memory",
+              "input",
+              "constant",
+              "parameter",
+              "unresolved-local"
+            ]
+          },
+          "level": {
+            "type": "integer"
+          },
+          "boundary": {
+            "type": "boolean"
+          },
+          "sourceState": {
+            "type": "string",
+            "enum": [
+              "constant",
+              "external-input",
+              "internal",
+              "unresolved"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "kind",
+          "level",
+          "boundary",
+          "sourceState"
+        ],
+        "additionalProperties": true
+      },
+      "MemoryEdge": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "data-transfer",
+              "control-dependency",
+              "timer-dependency",
+              "parameter-in",
+              "parameter-out",
+              "argument-preparation"
+            ]
+          },
+          "evidence": {
+            "$ref": "#/components/schemas/Evidence"
+          }
+        },
+        "required": [
+          "id",
+          "from",
+          "to",
+          "kind",
+          "evidence"
+        ],
+        "additionalProperties": true
+      },
+      "MemoryFlow": {
+        "type": "object",
+        "properties": {
+          "focus": {
+            "type": "string"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MemoryNode"
+            }
+          },
+          "edges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MemoryEdge"
+            }
+          },
+          "truncated": {
+            "type": "boolean"
+          },
+          "hasCycle": {
+            "type": "boolean"
+          },
+          "sourceStatus": {
+            "type": "string",
+            "enum": [
+              "potential-writers-found",
+              "no-mapped-writer"
+            ]
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limits": {
+            "type": "object",
+            "properties": {
+              "maxDepth": {
+                "type": "integer"
+              },
+              "maxNodes": {
+                "type": "integer"
+              },
+              "maxEdges": {
+                "type": "integer"
+              }
+            },
+            "required": [],
+            "additionalProperties": true
+          },
+          "diagnostics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Diagnostic"
+            }
+          },
+          "semantics": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "focus",
+          "nodes",
+          "edges",
+          "truncated",
+          "hasCycle",
+          "sourceStatus",
+          "sources",
+          "limits",
+          "diagnostics",
+          "semantics"
+        ],
+        "additionalProperties": true
+      },
+      "PointReport": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "query": {
+            "type": "string"
+          },
+          "ambiguous": {
+            "type": "boolean"
+          },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Symbol"
+            }
+          },
+          "operand": {
+            "type": "string"
+          },
+          "symbols": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Symbol"
+            }
+          },
+          "directBlocks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlockSummary"
+            }
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Reference"
+            }
+          },
+          "referenceTotal": {
+            "type": "integer"
+          },
+          "relatedCalls": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "call": {
+                  "$ref": "#/components/schemas/Call"
+                },
+                "relation": {
+                  "type": "string"
+                },
+                "graph": {
+                  "$ref": "#/components/schemas/ParameterGraph"
+                },
+                "calleeReferences": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Reference"
+                  }
+                }
+              },
+              "required": [
+                "call",
+                "relation",
+                "graph",
+                "calleeReferences"
+              ],
+              "additionalProperties": true
+            }
+          },
+          "totalCalls": {
+            "type": "integer"
+          },
+          "flow": {
+            "$ref": "#/components/schemas/MemoryFlow"
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "parsedBlocks": {
+                "type": "integer"
+              },
+              "protectedBlocks": {
+                "type": "integer"
+              },
+              "unavailableBlocks": {
+                "type": "integer"
+              }
+            },
+            "required": [],
+            "additionalProperties": true
+          },
+          "truncated": {
+            "type": "boolean"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "semantics": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "context",
+          "query",
+          "ambiguous",
+          "warnings"
+        ],
+        "additionalProperties": true
+      }
+    }
+  }
+}
