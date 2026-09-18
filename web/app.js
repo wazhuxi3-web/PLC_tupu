@@ -70,7 +70,7 @@ function pointFlowMarkup(flow){
   const valueTargets=unique(flow.edges.filter(e=>e.from===flow.focus&&['data-transfer','parameter-in','parameter-out','argument-preparation'].includes(e.kind)).map(e=>names.get(e.to)));
   const conditionTargets=unique(flow.edges.filter(e=>e.from===flow.focus&&!['data-transfer','parameter-in','parameter-out','argument-preparation'].includes(e.kind)).map(e=>names.get(e.to)));
   const kinds={'data-transfer':'数值 / 运算结果传递','control-dependency':'逻辑条件影响','timer-dependency':'定时器条件影响','parameter-in':'输入参数绑定','parameter-out':'输出参数绑定','argument-preparation':'调用前参数准备'};
-  return '<h3>点位的来源与去向</h3><div class="point-overview"><p><strong>直接来源：</strong>'+esc(source.join('；')||'当前分析未还原写入来源，不能据此判断没有来源。')+'</p><p><strong>数值 / 参数去向：</strong>'+esc(valueTargets.join('；')||'未还原直接数值去向。')+'</p><p><strong>还参与条件：</strong>'+esc(conditionTargets.join('；')||'未还原条件影响。')+'</p></div><p class="small">实线：数值依赖或参数传递；虚线：比较、布尔或定时器条件影响。常量会单独标出，未知来源保留为边界。'+(flow.hasCycle?'图中包含内部反馈或循环关系。':'')+'</p><div class="graph-scroll memory-graph"><svg id="point-flow" role="img" aria-label="点位来源与去向流程图"></svg></div><p class="small">'+flow.nodes.length+' 个节点 · '+flow.edges.length+' 条证据关系 · 最多上下游各 '+flow.limits.maxDepth+' 层'+(flow.truncated?' · 达到显示上限，边界已标出，可继续输入边界点位追踪。':'')+'</p><details><summary>流程图的全部关系与证据</summary>'+table(['来源 → 去向','关系','位置',''],flow.edges.map((e,i)=>'<tr><td>'+esc(names.get(e.from))+' → '+esc(names.get(e.to))+'</td><td>'+esc(kinds[e.kind]??e.kind)+'</td><td>'+esc(e.evidence.blockId.split('--').at(-1))+' / N'+e.evidence.network+' / '+e.evidence.row+'</td><td><button data-memory-ref="'+i+'">查看证据</button></td></tr>'))+'</details>';
+  return '<h3>点位的来源与去向</h3><div class="point-overview"><p><strong>直接来源：</strong>'+esc(source.join('；')||'当前分析未还原写入来源，不能据此判断没有来源。')+'</p><p><strong>数值 / 参数去向：</strong>'+esc(valueTargets.join('；')||'未还原直接数值去向。')+'</p><p><strong>还参与条件：</strong>'+esc(conditionTargets.join('；')||'未还原条件影响。')+'</p></div><div class="flow-filter" role="group" aria-label="流程图关系显示"><label><input id="show-solid-flow" type="checkbox" checked aria-controls="point-flow"><span class="line-sample solid"></span>显示实线：数值 / 参数</label><label><input id="show-condition-flow" type="checkbox" checked aria-controls="point-flow"><span class="line-sample dashed"></span>显示虚线：条件影响</label><span id="point-flow-visible" class="small"></span></div><p class="small">可分别隐藏或显示实线和虚线；图下方的完整证据列表不会被过滤。常量会单独标出，未知来源保留为边界。'+(flow.hasCycle?'图中包含内部反馈或循环关系。':'')+'</p><div class="graph-scroll memory-graph"><svg id="point-flow" role="img" aria-label="点位来源与去向流程图"></svg></div><p class="small">'+flow.nodes.length+' 个节点 · '+flow.edges.length+' 条证据关系 · 最多上下游各 '+flow.limits.maxDepth+' 层'+(flow.truncated?' · 达到显示上限，边界已标出，可继续输入边界点位追踪。':'')+'</p><details><summary>流程图的全部关系与证据</summary>'+table(['来源 → 去向','关系','位置',''],flow.edges.map((e,i)=>'<tr><td>'+esc(names.get(e.from))+' → '+esc(names.get(e.to))+'</td><td>'+esc(kinds[e.kind]??e.kind)+'</td><td>'+esc(e.evidence.blockId.split('--').at(-1))+' / N'+e.evidence.network+' / '+e.evidence.row+'</td><td><button data-memory-ref="'+i+'">查看证据</button></td></tr>'))+'</details>';
 }
 function drawPointFlow(flow){
   const svg=$('point-flow');if(!svg)return;
@@ -95,8 +95,15 @@ function drawPointFlow(flow){
   }).join('');
   svg.querySelectorAll('[data-memory-edge]').forEach(el=>el.onclick=safe(()=>showEvidence(flow.edges[Number(el.dataset.memoryEdge)].evidence)));
   $('point-results').querySelectorAll('[data-memory-ref]').forEach(el=>el.onclick=safe(()=>showEvidence(flow.edges[Number(el.dataset.memoryRef)].evidence)));
+  setupPointFlowFilters(svg);
   const focusPosition=position.get(flow.focus),container=svg.parentElement;
   if(focusPosition){container.scrollLeft=Math.max(0,focusPosition.x-container.clientWidth/2+nodeWidth/2);container.scrollTop=Math.max(0,focusPosition.y-container.clientHeight/2+32);}
 }
 
 
+
+function setupPointFlowFilters(svg){
+  const solid=$('show-solid-flow'),condition=$('show-condition-flow'),status=$('point-flow-visible');
+  const update=()=>{let visible=0;svg.querySelectorAll('[data-memory-edge]').forEach(edge=>{const show=edge.classList.contains('condition-edge')?condition.checked:solid.checked;edge.style.display=show?'':'none';if(show)visible++;});status.textContent=`当前显示 ${visible} 条连线`;};
+  solid.onchange=update;condition.onchange=update;update();
+}
